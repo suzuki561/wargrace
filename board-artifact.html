@@ -203,23 +203,25 @@ body{
   padding:calc(12px + env(safe-area-inset-top, 0px)) calc(16px + env(safe-area-inset-right, 0px))
           calc(14px + env(safe-area-inset-bottom, 0px)) calc(16px + env(safe-area-inset-left, 0px)); }
 #picker.hidden{ display:none; }
-#picker h3{ margin:4px 0 8px; text-align:center; font-size:19px; letter-spacing:.25em;
-  color:#f0e2ae; font-weight:600; }
-#picker .cards{ flex:1; display:flex; gap:16px; overflow-x:auto; align-items:center;
-  padding:8px 4px 30px; -webkit-overflow-scrolling:touch; }
+#picker h3{ margin:2px 0 6px; text-align:center; font-size:17px; letter-spacing:.22em;
+  color:#f0e2ae; font-weight:600; flex:0 0 auto; }
+#picker .cards{ flex:1 1 auto; min-height:0; display:flex; gap:16px; overflow-x:auto; overflow-y:hidden;
+  align-items:center; padding:6px 4px; -webkit-overflow-scrolling:touch; }
 #picker .cards > :first-child{ margin-left:auto; }
 #picker .cards > :last-child{ margin-right:auto; }
+/* カードは利用可能な高さいっぱいに拡大（横スクロールで全カード閲覧） */
 #picker .pcard{ flex:0 0 auto; position:relative; cursor:pointer; transition:transform .15s ease;
-  width:min(46vw, 250px, calc((100vh - 230px) * .714)); aspect-ratio:300/420; border-radius:12px; }
+  height:100%; max-height:min(74vh, 460px); width:auto; aspect-ratio:300/420; border-radius:12px; }
 #picker .pcard svg{ width:100%; height:100%; display:block; border-radius:12px;
   box-shadow:0 10px 26px rgba(0,0,0,.6); }
-#picker .pcard.sel{ transform:scale(1.06);
+#picker .pcard.sel{ transform:scale(1.05);
   box-shadow:0 0 0 3px var(--gold), 0 0 26px rgba(232,195,74,.8); }
 #picker .pcard.inert{ filter:grayscale(.6) brightness(.7); cursor:default; }
-#picker .pcard .plabel{ position:absolute; left:-10%; right:-10%; bottom:-26px; text-align:center;
-  font-size:12px; letter-spacing:.08em; color:var(--violet); white-space:nowrap; }
-#picker .pbtns{ display:flex; gap:12px; margin-top:6px; }
-#picker .pbtns .btn{ flex:1; min-height:56px; font-size:17px; border-radius:12px; }
+#picker .pcard .plabel{ position:absolute; left:6%; right:6%; bottom:5%; text-align:center;
+  font-size:12px; letter-spacing:.06em; color:#fff; background:rgba(10,6,20,.82);
+  border:1px solid rgba(201,162,39,.5); border-radius:7px; padding:4px 0; }
+#picker .pbtns{ flex:0 0 auto; display:flex; gap:12px; margin-top:6px; }
+#picker .pbtns .btn{ flex:1; min-height:52px; font-size:17px; border-radius:12px; }
 .hint{ position:fixed; bottom:calc(12px + env(safe-area-inset-bottom, 0px));
   left:calc(18px + env(safe-area-inset-left, 0px)); z-index:30; font-size:11px; letter-spacing:.12em;
   color:rgba(156,146,189,.85); }
@@ -239,17 +241,18 @@ body{
   .hint{ display:none; }
   .brand{ display:none; }               /* プレイ中は装飾ロゴを隠して上部を空ける */
   .hud{ justify-content:flex-end; }     /* 音声・視点操作は右上に固定 */
-  /* ログは左上に寄せて盤面を邪魔しない */
+  /* ログは右上へ（操作パネルを左に置くため） */
   #log{ width:min(34vw, 190px); font-size:11px; max-height:38vh;
-    left:calc(8px + env(safe-area-inset-left, 0px)); right:auto;
+    right:calc(8px + env(safe-area-inset-right, 0px)); left:auto;
     top:calc(56px + env(safe-area-inset-top, 0px)); }
   .plaque{ left:calc(8px + env(safe-area-inset-left, 0px)); transform:none; max-width:min(46vw, 260px); }
-  /* 操作パネルは右端に縦置き。盤面は常に見える */
-  #actionBar{ top:50%; bottom:auto; left:auto; transform:translateY(-50%);
-    right:calc(8px + env(safe-area-inset-right, 0px)); flex-direction:column;
+  /* 操作パネルは左端に縦置き。盤面は常に見える */
+  #actionBar{ top:50%; bottom:auto; right:auto; transform:translateY(-50%);
+    left:calc(8px + env(safe-area-inset-left, 0px)); flex-direction:column;
     width:auto; gap:10px; }
   #actionBar .btn{ flex:0 0 auto; min-height:0; padding:14px 18px; font-size:15px;
-    white-space:nowrap; min-width:132px; }
+    white-space:nowrap; min-width:132px;
+    background:linear-gradient(rgba(58,47,107,.9),rgba(36,28,74,.9)); }
 }
 
 #fx{ position:fixed; inset:0; z-index:45; pointer-events:none; overflow:hidden; }
@@ -1006,7 +1009,7 @@ var STRIKERS = {
 var SPELLS = { curse:'呪詛', cyclone:'竜巻', heal:'治癒', cancel:'取消', growth:'成長', aging:'老化' };
 var MAX_GUARDS = 10;
 var uidSeq = 0;
-var WG_VERSION = '2026.07.09b';
+var WG_VERSION = '2026.07.09c';
 
 var S = null;      // ゲーム状態
 var UI = { sel:-1, summon:false, busy:false };
