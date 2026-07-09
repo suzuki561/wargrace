@@ -239,6 +239,8 @@ body{
 /* スマホ横持ちはCSS幅が900pxを超える機種が多い（例: 932px）。
    幅が狭い or 高さが低い（＝横持ちスマホ）を「モバイル」とみなす */
 @media (max-width:900px), (max-height:560px){
+  /* テーブルを奥（上）へ寄せ、下部の手札と重ならないようにする */
+  .world{ top:38%; }
   /* 手札は常に画面下部に表示（コマンドには含めない） */
   .my-hand{ display:flex; bottom:calc(2px + env(safe-area-inset-bottom, 0px)); z-index:35; }
   .my-hand .hc{ width:104px; height:146px; margin:0 -8px; }
@@ -452,7 +454,7 @@ var STRIKERS = {
 var SPELLS = { curse:'呪詛', cyclone:'竜巻', heal:'治癒', cancel:'取消', growth:'成長', aging:'老化' };
 var MAX_GUARDS = 10;
 var uidSeq = 0;
-var WG_VERSION = '2026.07.09e';
+var WG_VERSION = '2026.07.09f';
 
 var S = null;      // ゲーム状態
 var UI = { sel:-1, summon:false, busy:false };
@@ -2285,9 +2287,9 @@ function fit(){
   var narrow = window.innerWidth <= 900 || window.innerHeight <= 560;
   var s;
   if(narrow){
-    // 手札の扇は隠れているので縦の余白を切り詰め、傾き投影ぶん大きく表示（カードを拡大）
+    // 下部に手札を常時表示するぶんの余白を確保し、テーブルを奥（上）に収める
     var sW = window.innerWidth / 900;
-    var sH = (window.innerHeight - 20) / 660;
+    var sH = (window.innerHeight - 170) / 600;
     s = Math.min(sW, sH, 1.5);
   } else {
     s = Math.min(window.innerWidth/1180, (window.innerHeight-150)/1000, 1.05);
