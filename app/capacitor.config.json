@@ -1,0 +1,11 @@
+{
+  "appId": "inc.dxhr.wargrace",
+  "appName": "wargrace",
+  "webDir": "www",
+  "backgroundColor": "#14101f",
+  "ios": {
+    "contentInset": "never",
+    "backgroundColor": "#14101f",
+    "preferredContentMode": "mobile"
+  }
+}

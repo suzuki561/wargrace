@@ -1,0 +1,48 @@
+<svg viewBox="0 0 300 420" xmlns="http://www.w3.org/2000/svg" font-family="'Hiragino Mincho ProN','Yu Mincho','Noto Serif JP',serif">
+  <defs>
+    <linearGradient id="sp-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1c2b4a"/><stop offset="1" stop-color="#0a0f1e"/>
+    </linearGradient>
+    <radialGradient id="sp-art" cx="0.5" cy="0.4" r="0.9">
+      <stop offset="0" stop-color="#243a5e"/><stop offset="0.65" stop-color="#121e38"/><stop offset="1" stop-color="#060a16"/>
+    </radialGradient>
+    <radialGradient id="sp-gem" cx="0.35" cy="0.3" r="0.9">
+      <stop offset="0" stop-color="#9fe0ff"/><stop offset="1" stop-color="#1e5f9a"/>
+    </radialGradient>
+    <clipPath id="sp-clip"><rect x="22" y="66" width="256" height="196" rx="8"/></clipPath>
+  </defs>
+  <rect x="4" y="4" width="292" height="412" rx="16" fill="url(#sp-bg)" stroke="#c9a227" stroke-width="3"/>
+  <rect x="11" y="11" width="278" height="398" rx="11" fill="none" stroke="#c9a227" stroke-opacity="0.4"/>
+  <text x="150" y="42" text-anchor="middle" font-size="24" font-weight="bold" fill="#f5e9c8">精 霊</text>
+  <text x="150" y="59" text-anchor="middle" font-size="10" letter-spacing="4" fill="#d8b95a" font-family="Georgia,serif">SPIRIT</text>
+  <rect x="22" y="66" width="256" height="196" rx="8" fill="url(#sp-art)" stroke="#c9a227" stroke-opacity="0.6"/>
+  <g clip-path="url(#sp-clip)">
+    <circle cx="226" cy="104" r="22" fill="#e8edf5" opacity="0.9"/>
+    <circle cx="219" cy="98" r="5" fill="#c2ccd8" opacity="0.5"/>
+    <circle cx="232" cy="110" r="3.5" fill="#c2ccd8" opacity="0.5"/>
+    <circle cx="60" cy="92" r="1.6" fill="#ffffff" opacity="0.8"/>
+    <circle cx="92" cy="76" r="1.2" fill="#ffffff" opacity="0.6"/>
+    <circle cx="256" cy="152" r="1.4" fill="#ffffff" opacity="0.7"/>
+    <circle cx="46" cy="150" r="1.3" fill="#ffffff" opacity="0.6"/>
+    <circle cx="188" cy="80" r="1.2" fill="#ffffff" opacity="0.5"/>
+    <path d="M150 100 C185 125 180 175 162 200 C172 215 168 228 155 233 C150 226 148 226 142 234 C126 228 120 210 133 197 C112 172 115 125 150 100 Z" fill="#bfe8ff" opacity="0.3"/>
+    <path d="M150 118 C172 135 170 172 158 192 C150 205 140 205 135 192 C122 170 128 135 150 118 Z" fill="#dff4ff" opacity="0.55"/>
+    <ellipse cx="150" cy="163" rx="16" ry="26" fill="#ffffff" opacity="0.9"/>
+    <ellipse cx="144" cy="156" rx="3.4" ry="5" fill="#1c2b4a"/>
+    <ellipse cx="156" cy="156" rx="3.4" ry="5" fill="#1c2b4a"/>
+    <path d="M120 214 C104 222 96 236 98 250" fill="none" stroke="#bfe8ff" stroke-width="3" stroke-linecap="round" opacity="0.5"/>
+    <path d="M180 210 C196 220 202 234 200 248" fill="none" stroke="#bfe8ff" stroke-width="3" stroke-linecap="round" opacity="0.5"/>
+    <path d="M150 236 C148 244 150 252 154 258" fill="none" stroke="#bfe8ff" stroke-width="2.5" stroke-linecap="round" opacity="0.4"/>
+    <circle cx="102" cy="130" r="4" fill="#bfe8ff" opacity="0.7"/>
+    <circle cx="198" cy="140" r="3" fill="#bfe8ff" opacity="0.6"/>
+    <circle cx="112" cy="182" r="2.5" fill="#bfe8ff" opacity="0.55"/>
+    <circle cx="192" cy="182" r="2" fill="#bfe8ff" opacity="0.5"/>
+  </g>
+  <circle cx="251" cy="93" r="17" fill="url(#sp-gem)" stroke="#c9a227" stroke-width="2.5"/>
+  <text x="251" y="100" text-anchor="middle" font-size="19" font-weight="bold" fill="#ffffff" font-family="Georgia,serif">1</text>
+  <rect x="22" y="272" width="256" height="22" rx="4" fill="#c9a227" fill-opacity="0.14"/>
+  <text x="150" y="287" text-anchor="middle" font-size="11" letter-spacing="2" fill="#d8b95a">ストライカー ─ エネルギー 1</text>
+  <text x="150" y="328" text-anchor="middle" font-size="15" font-weight="bold" fill="#f5efdd">呪詛の対象にならない</text>
+  <line x1="60" y1="358" x2="240" y2="358" stroke="#c9a227" stroke-opacity="0.4"/>
+  <text x="150" y="384" text-anchor="middle" font-size="11" fill="#8fa0b5">「触れられぬ者に、呪いは届かない」</text>
+</svg>

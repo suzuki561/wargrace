@@ -1,0 +1,49 @@
+<svg viewBox="0 0 300 420" xmlns="http://www.w3.org/2000/svg" font-family="'Hiragino Mincho ProN','Yu Mincho','Noto Serif JP',serif">
+  <defs>
+    <linearGradient id="hr-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3a2c14"/><stop offset="1" stop-color="#171006"/>
+    </linearGradient>
+    <radialGradient id="hr-art" cx="0.5" cy="0.35" r="0.9">
+      <stop offset="0" stop-color="#f2d98a"/><stop offset="0.4" stop-color="#c99a3e"/><stop offset="0.78" stop-color="#6b4a1a"/><stop offset="1" stop-color="#2c1e08"/>
+    </radialGradient>
+    <radialGradient id="hr-gem" cx="0.35" cy="0.3" r="0.9">
+      <stop offset="0" stop-color="#9fe0ff"/><stop offset="1" stop-color="#1e5f9a"/>
+    </radialGradient>
+    <clipPath id="hr-clip"><rect x="22" y="66" width="256" height="196" rx="8"/></clipPath>
+  </defs>
+  <rect x="4" y="4" width="292" height="412" rx="16" fill="url(#hr-bg)" stroke="#c9a227" stroke-width="3"/>
+  <rect x="11" y="11" width="278" height="398" rx="11" fill="none" stroke="#c9a227" stroke-opacity="0.4"/>
+  <text x="150" y="42" text-anchor="middle" font-size="24" font-weight="bold" fill="#f5e9c8">英 雄</text>
+  <text x="150" y="59" text-anchor="middle" font-size="10" letter-spacing="4" fill="#d8b95a" font-family="Georgia,serif">HERO</text>
+  <rect x="22" y="66" width="256" height="196" rx="8" fill="url(#hr-art)" stroke="#c9a227" stroke-opacity="0.6"/>
+  <g clip-path="url(#hr-clip)">
+    <g fill="#ffe9a8" opacity="0.3">
+      <path d="M150 140 L142 46 L158 46 Z"/>
+      <path d="M150 140 L142 46 L158 46 Z" transform="rotate(45 150 140)"/>
+      <path d="M150 140 L142 46 L158 46 Z" transform="rotate(90 150 140)"/>
+      <path d="M150 140 L142 46 L158 46 Z" transform="rotate(135 150 140)"/>
+      <path d="M150 140 L142 46 L158 46 Z" transform="rotate(180 150 140)"/>
+      <path d="M150 140 L142 46 L158 46 Z" transform="rotate(225 150 140)"/>
+      <path d="M150 140 L142 46 L158 46 Z" transform="rotate(270 150 140)"/>
+      <path d="M150 140 L142 46 L158 46 Z" transform="rotate(315 150 140)"/>
+    </g>
+    <ellipse cx="150" cy="244" rx="72" ry="12" fill="#2c1e08" opacity="0.7"/>
+    <path d="M138 170 C112 186 104 220 112 246 C126 236 133 210 140 194 Z" fill="#8a1f1f"/>
+    <path d="M136 248 L139 196 C130 190 128 176 133 166 L150 158 L167 166 C172 176 170 190 162 196 L165 248 Z" fill="#2a2118"/>
+    <line x1="163" y1="170" x2="193" y2="114" stroke="#2a2118" stroke-width="9" stroke-linecap="round"/>
+    <line x1="193" y1="110" x2="203" y2="52" stroke="#e8eef5" stroke-width="5.5" stroke-linecap="round"/>
+    <line x1="184" y1="108" x2="204" y2="104" stroke="#c9a227" stroke-width="4.5" stroke-linecap="round"/>
+    <path d="M203 48 L209 42 L207 52 Z" fill="#ffffff" opacity="0.9"/>
+    <circle cx="150" cy="145" r="12" fill="#2a2118"/>
+    <path d="M150 133 C158 126 166 126 170 132 C164 132 158 134 154 138 Z" fill="#8a1f1f"/>
+    <path d="M128 250 L172 250 L170 258 L130 258 Z" fill="#1c1610"/>
+  </g>
+  <circle cx="251" cy="93" r="17" fill="url(#hr-gem)" stroke="#c9a227" stroke-width="2.5"/>
+  <text x="251" y="100" text-anchor="middle" font-size="19" font-weight="bold" fill="#ffffff" font-family="Georgia,serif">2</text>
+  <rect x="22" y="272" width="256" height="22" rx="4" fill="#c9a227" fill-opacity="0.14"/>
+  <text x="150" y="287" text-anchor="middle" font-size="11" letter-spacing="2" fill="#d8b95a">ストライカー ─ エネルギー 2</text>
+  <text x="150" y="318" text-anchor="middle" font-size="14" font-weight="bold" fill="#f5efdd">戦場から離れた時、</text>
+  <text x="150" y="340" text-anchor="middle" font-size="14" font-weight="bold" fill="#f5efdd">護衛を1人増やす</text>
+  <line x1="60" y1="360" x2="240" y2="360" stroke="#c9a227" stroke-opacity="0.4"/>
+  <text x="150" y="386" text-anchor="middle" font-size="11" fill="#a88d5a">「その剣は民の希望のために」</text>
+</svg>

@@ -1,0 +1,44 @@
+<svg viewBox="0 0 300 420" xmlns="http://www.w3.org/2000/svg" font-family="'Hiragino Mincho ProN','Yu Mincho','Noto Serif JP',serif">
+  <defs>
+    <linearGradient id="hl-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2b1f4e"/><stop offset="1" stop-color="#120c24"/>
+    </linearGradient>
+    <radialGradient id="hl-art" cx="0.5" cy="0.42" r="0.85">
+      <stop offset="0" stop-color="#fdf3cf"/><stop offset="0.35" stop-color="#caa84e"/><stop offset="0.75" stop-color="#4a3a14"/><stop offset="1" stop-color="#241c08"/>
+    </radialGradient>
+    <linearGradient id="hl-beam" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.75"/><stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+    <clipPath id="hl-clip"><rect x="22" y="66" width="256" height="196" rx="8"/></clipPath>
+  </defs>
+  <rect x="4" y="4" width="292" height="412" rx="16" fill="url(#hl-bg)" stroke="#8f7fd0" stroke-width="3"/>
+  <rect x="11" y="11" width="278" height="398" rx="11" fill="none" stroke="#8f7fd0" stroke-opacity="0.35"/>
+  <text x="150" y="42" text-anchor="middle" font-size="24" font-weight="bold" fill="#ede8ff">治 癒</text>
+  <text x="150" y="59" text-anchor="middle" font-size="10" letter-spacing="4" fill="#b3a4ea" font-family="Georgia,serif">HEAL</text>
+  <rect x="22" y="66" width="256" height="196" rx="8" fill="url(#hl-art)" stroke="#8f7fd0" stroke-opacity="0.6"/>
+  <g clip-path="url(#hl-clip)">
+    <rect x="118" y="66" width="64" height="196" fill="url(#hl-beam)" opacity="0.55"/>
+    <path d="M126 152 C92 130 68 140 56 168 C82 160 94 168 104 184 C111 170 118 160 126 156 Z" fill="#fdf6e2" opacity="0.92"/>
+    <path d="M128 166 C104 156 86 162 78 182 C96 177 106 184 112 196 C117 184 122 172 128 168 Z" fill="#f2e2b0" opacity="0.85"/>
+    <path d="M174 152 C208 130 232 140 244 168 C218 160 206 168 196 184 C189 170 182 160 174 156 Z" fill="#fdf6e2" opacity="0.92"/>
+    <path d="M172 166 C196 156 214 162 222 182 C204 177 194 184 188 196 C183 184 178 172 172 168 Z" fill="#f2e2b0" opacity="0.85"/>
+    <circle cx="150" cy="150" r="30" fill="none" stroke="#ffffff" stroke-opacity="0.6" stroke-width="2"/>
+    <circle cx="150" cy="150" r="21" fill="#fff8e0"/>
+    <rect x="146" y="132" width="8" height="37" rx="3" fill="#caa84e"/>
+    <rect x="131.5" y="146.5" width="37" height="8" rx="3" fill="#caa84e"/>
+    <path d="M150 84 L154 94 L150 104 L146 94 Z" fill="#ffffff" opacity="0.9"/>
+    <path d="M104 108 L107 115 L104 122 L101 115 Z" fill="#ffffff" opacity="0.75"/>
+    <path d="M198 100 L201 107 L198 114 L195 107 Z" fill="#ffffff" opacity="0.75"/>
+    <circle cx="122" cy="126" r="2.5" fill="#ffffff" opacity="0.8"/>
+    <circle cx="182" cy="120" r="2" fill="#ffffff" opacity="0.7"/>
+    <circle cx="138" cy="98" r="1.8" fill="#ffffff" opacity="0.65"/>
+    <circle cx="166" cy="92" r="2.2" fill="#ffffff" opacity="0.7"/>
+    <path d="M96 240 C110 220 132 212 150 212 C168 212 190 220 204 240 C186 230 166 226 150 226 C134 226 114 230 96 240 Z" fill="#3a2c0e"/>
+    <ellipse cx="150" cy="248" rx="92" ry="12" fill="#241c08" opacity="0.85"/>
+  </g>
+  <rect x="22" y="272" width="256" height="22" rx="4" fill="#8f7fd0" fill-opacity="0.14"/>
+  <text x="150" y="287" text-anchor="middle" font-size="11" letter-spacing="2" fill="#b3a4ea">スペルカード</text>
+  <text x="150" y="328" text-anchor="middle" font-size="16" font-weight="bold" fill="#f0ebff">護衛を3体復活させる</text>
+  <line x1="60" y1="358" x2="240" y2="358" stroke="#8f7fd0" stroke-opacity="0.35"/>
+  <text x="150" y="384" text-anchor="middle" font-size="11" fill="#8f83b8">「光は倒れし者を再び立たせる」</text>
+</svg>

@@ -1,0 +1,44 @@
+<svg viewBox="0 0 300 420" xmlns="http://www.w3.org/2000/svg" font-family="'Hiragino Mincho ProN','Yu Mincho','Noto Serif JP',serif">
+  <defs>
+    <linearGradient id="gr-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2b1f4e"/><stop offset="1" stop-color="#120c24"/>
+    </linearGradient>
+    <radialGradient id="gr-art" cx="0.5" cy="0.6" r="0.85">
+      <stop offset="0" stop-color="#1e5230"/><stop offset="0.6" stop-color="#0f2a16"/><stop offset="1" stop-color="#06130a"/>
+    </radialGradient>
+    <radialGradient id="gr-glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#baf5c8" stop-opacity="0.8"/><stop offset="1" stop-color="#baf5c8" stop-opacity="0"/>
+    </radialGradient>
+    <clipPath id="gr-clip"><rect x="22" y="66" width="256" height="196" rx="8"/></clipPath>
+  </defs>
+  <rect x="4" y="4" width="292" height="412" rx="16" fill="url(#gr-bg)" stroke="#8f7fd0" stroke-width="3"/>
+  <rect x="11" y="11" width="278" height="398" rx="11" fill="none" stroke="#8f7fd0" stroke-opacity="0.35"/>
+  <text x="150" y="42" text-anchor="middle" font-size="24" font-weight="bold" fill="#ede8ff">成 長</text>
+  <text x="150" y="59" text-anchor="middle" font-size="10" letter-spacing="4" fill="#b3a4ea" font-family="Georgia,serif">GROWTH</text>
+  <rect x="22" y="66" width="256" height="196" rx="8" fill="url(#gr-art)" stroke="#8f7fd0" stroke-opacity="0.6"/>
+  <g clip-path="url(#gr-clip)">
+    <path d="M22 240 C70 226 110 232 150 232 C190 232 230 226 278 240 L278 262 L22 262 Z" fill="#0a1c0e"/>
+    <ellipse cx="150" cy="236" rx="46" ry="10" fill="#143a1e"/>
+    <circle cx="150" cy="112" r="34" fill="url(#gr-glow)"/>
+    <path d="M150 232 C150 204 138 194 142 166 C145 146 155 136 152 112" fill="none" stroke="#3f9e58" stroke-width="6" stroke-linecap="round"/>
+    <path d="M143 192 C118 187 105 170 103 150 C125 157 137 170 142 184 Z" fill="#4ac06a"/>
+    <path d="M148 168 C172 160 186 166 194 146 C170 141 154 148 148 160 Z" fill="#3fae5e"/>
+    <path d="M144 210 C126 208 116 198 112 186 C128 190 138 198 144 204 Z" fill="#358f4e"/>
+    <ellipse cx="152" cy="108" rx="12" ry="16" fill="#baf5c8"/>
+    <ellipse cx="152" cy="110" rx="6" ry="9" fill="#e8ffe9"/>
+    <path d="M152 226 C198 212 202 172 168 158 C138 146 134 120 158 106" fill="none" stroke="#8ef0a8" stroke-width="3" stroke-linecap="round" opacity="0.85"/>
+    <path d="M84 176 L90 164 L96 176 M87 164 L90 148" stroke="#8ef0a8" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.8"/>
+    <path d="M212 156 L218 144 L224 156 M215 144 L218 128" stroke="#8ef0a8" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.7"/>
+    <circle cx="112" cy="122" r="2.5" fill="#baf5c8" opacity="0.8"/>
+    <circle cx="196" cy="102" r="2" fill="#baf5c8" opacity="0.7"/>
+    <circle cx="128" cy="92" r="1.8" fill="#baf5c8" opacity="0.6"/>
+    <circle cx="176" cy="84" r="2.2" fill="#baf5c8" opacity="0.65"/>
+    <circle cx="150" cy="76" r="1.6" fill="#baf5c8" opacity="0.55"/>
+  </g>
+  <rect x="22" y="272" width="256" height="22" rx="4" fill="#8f7fd0" fill-opacity="0.14"/>
+  <text x="150" y="287" text-anchor="middle" font-size="11" letter-spacing="2" fill="#b3a4ea">スペルカード</text>
+  <text x="150" y="318" text-anchor="middle" font-size="15" font-weight="bold" fill="#f0ebff">戦場のストライカー1人の</text>
+  <text x="150" y="340" text-anchor="middle" font-size="15" font-weight="bold" fill="#f0ebff">エネルギーを1上げる</text>
+  <line x1="60" y1="360" x2="240" y2="360" stroke="#8f7fd0" stroke-opacity="0.35"/>
+  <text x="150" y="386" text-anchor="middle" font-size="11" fill="#8f83b8">「力は静かに満ちてゆく」</text>
+</svg>

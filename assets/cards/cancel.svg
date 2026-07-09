@@ -1,0 +1,42 @@
+<svg viewBox="0 0 300 420" xmlns="http://www.w3.org/2000/svg" font-family="'Hiragino Mincho ProN','Yu Mincho','Noto Serif JP',serif">
+  <defs>
+    <linearGradient id="ca-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2b1f4e"/><stop offset="1" stop-color="#120c24"/>
+    </linearGradient>
+    <radialGradient id="ca-art" cx="0.5" cy="0.5" r="0.75">
+      <stop offset="0" stop-color="#1d3d63"/><stop offset="0.7" stop-color="#0c1c33"/><stop offset="1" stop-color="#060d18"/>
+    </radialGradient>
+    <radialGradient id="ca-flash" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#9fe4ff" stop-opacity="0.55"/><stop offset="1" stop-color="#9fe4ff" stop-opacity="0"/>
+    </radialGradient>
+    <clipPath id="ca-clip"><rect x="22" y="66" width="256" height="196" rx="8"/></clipPath>
+  </defs>
+  <rect x="4" y="4" width="292" height="412" rx="16" fill="url(#ca-bg)" stroke="#8f7fd0" stroke-width="3"/>
+  <rect x="11" y="11" width="278" height="398" rx="11" fill="none" stroke="#8f7fd0" stroke-opacity="0.35"/>
+  <text x="150" y="42" text-anchor="middle" font-size="24" font-weight="bold" fill="#ede8ff">取 消</text>
+  <text x="150" y="59" text-anchor="middle" font-size="10" letter-spacing="4" fill="#b3a4ea" font-family="Georgia,serif">CANCEL</text>
+  <rect x="22" y="66" width="256" height="196" rx="8" fill="url(#ca-art)" stroke="#8f7fd0" stroke-opacity="0.6"/>
+  <g clip-path="url(#ca-clip)">
+    <circle cx="150" cy="164" r="72" fill="none" stroke="#3f8fc0" stroke-width="2.5" stroke-dasharray="26 8" opacity="0.85"/>
+    <circle cx="150" cy="164" r="60" fill="none" stroke="#35729c" stroke-width="1.5" stroke-dasharray="3 9" opacity="0.8"/>
+    <polygon points="150,110 197,191 103,191" fill="none" stroke="#35729c" stroke-width="1.5" opacity="0.55"/>
+    <polygon points="150,218 103,137 197,137" fill="none" stroke="#35729c" stroke-width="1.5" opacity="0.45"/>
+    <circle cx="150" cy="164" r="86" fill="url(#ca-flash)"/>
+    <line x1="98" y1="112" x2="202" y2="216" stroke="#7fdcff" stroke-width="11" stroke-linecap="round"/>
+    <line x1="202" y1="112" x2="98" y2="216" stroke="#7fdcff" stroke-width="11" stroke-linecap="round"/>
+    <line x1="98" y1="112" x2="202" y2="216" stroke="#ffffff" stroke-width="4" stroke-linecap="round"/>
+    <line x1="202" y1="112" x2="98" y2="216" stroke="#ffffff" stroke-width="4" stroke-linecap="round"/>
+    <polygon points="70,140 82,132 78,148" fill="#7fdcff" opacity="0.7"/>
+    <polygon points="228,150 218,142 224,158" fill="#7fdcff" opacity="0.7"/>
+    <polygon points="120,86 130,92 118,98" fill="#7fdcff" opacity="0.6"/>
+    <polygon points="186,238 176,230 188,228" fill="#7fdcff" opacity="0.6"/>
+    <polygon points="86,204 96,210 84,214" fill="#5ac8ff" opacity="0.5"/>
+    <path d="M56 100 L62 100 M59 97 L59 106" stroke="#5ac8ff" stroke-width="1.5" opacity="0.6"/>
+    <path d="M242 214 L248 214 M245 211 L245 220" stroke="#5ac8ff" stroke-width="1.5" opacity="0.6"/>
+  </g>
+  <rect x="22" y="272" width="256" height="22" rx="4" fill="#8f7fd0" fill-opacity="0.14"/>
+  <text x="150" y="287" text-anchor="middle" font-size="11" letter-spacing="2" fill="#b3a4ea">スペルカード</text>
+  <text x="150" y="328" text-anchor="middle" font-size="16" font-weight="bold" fill="#f0ebff">相手の呪文を無効化する</text>
+  <line x1="60" y1="358" x2="240" y2="358" stroke="#8f7fd0" stroke-opacity="0.35"/>
+  <text x="150" y="384" text-anchor="middle" font-size="11" fill="#8f83b8">「唱えられた言葉は、風に消えた」</text>
+</svg>

@@ -1,0 +1,41 @@
+<svg viewBox="0 0 300 420" xmlns="http://www.w3.org/2000/svg" font-family="'Hiragino Mincho ProN','Yu Mincho','Noto Serif JP',serif">
+  <defs>
+    <linearGradient id="cy-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2b1f4e"/><stop offset="1" stop-color="#120c24"/>
+    </linearGradient>
+    <linearGradient id="cy-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#22333d"/><stop offset="0.5" stop-color="#3a5561"/><stop offset="1" stop-color="#101c22"/>
+    </linearGradient>
+    <clipPath id="cy-clip"><rect x="22" y="66" width="256" height="196" rx="8"/></clipPath>
+  </defs>
+  <rect x="4" y="4" width="292" height="412" rx="16" fill="url(#cy-bg)" stroke="#8f7fd0" stroke-width="3"/>
+  <rect x="11" y="11" width="278" height="398" rx="11" fill="none" stroke="#8f7fd0" stroke-opacity="0.35"/>
+  <text x="150" y="42" text-anchor="middle" font-size="24" font-weight="bold" fill="#ede8ff">竜 巻</text>
+  <text x="150" y="59" text-anchor="middle" font-size="10" letter-spacing="4" fill="#b3a4ea" font-family="Georgia,serif">CYCLONE</text>
+  <rect x="22" y="66" width="256" height="196" rx="8" fill="url(#cy-sky)" stroke="#8f7fd0" stroke-opacity="0.6"/>
+  <g clip-path="url(#cy-clip)">
+    <ellipse cx="90" cy="80" rx="70" ry="18" fill="#1c2b33"/>
+    <ellipse cx="200" cy="74" rx="80" ry="20" fill="#22333d"/>
+    <ellipse cx="150" cy="88" rx="110" ry="16" fill="#182730" opacity="0.9"/>
+    <polyline points="222,92 204,126 218,128 196,164" fill="none" stroke="#ffe98a" stroke-width="3" stroke-linejoin="round" opacity="0.9"/>
+    <ellipse cx="150" cy="102" rx="86" ry="16" fill="#8fa9b5" stroke="#c2d4dc" stroke-opacity="0.5"/>
+    <ellipse cx="144" cy="128" rx="66" ry="13" fill="#7d97a4" stroke="#c2d4dc" stroke-opacity="0.45"/>
+    <ellipse cx="153" cy="153" rx="49" ry="11" fill="#6b8492" stroke="#c2d4dc" stroke-opacity="0.4"/>
+    <ellipse cx="146" cy="177" rx="34" ry="9" fill="#5a7280" stroke="#c2d4dc" stroke-opacity="0.35"/>
+    <ellipse cx="152" cy="199" rx="21" ry="7" fill="#4a5f6c" stroke="#c2d4dc" stroke-opacity="0.3"/>
+    <ellipse cx="149" cy="218" rx="11" ry="5" fill="#3a4c57"/>
+    <rect x="68" y="118" width="12" height="6" fill="#4a3a26" transform="rotate(24 74 121)"/>
+    <rect x="226" y="140" width="14" height="5" fill="#4a3a26" transform="rotate(-30 233 142)"/>
+    <rect x="84" y="176" width="10" height="5" fill="#54422c" transform="rotate(-18 89 178)"/>
+    <rect x="212" y="108" width="9" height="9" fill="#3f3220" transform="rotate(40 216 112)"/>
+    <path d="M52 96 L44 120 M64 150 L57 170 M244 96 L237 118 M252 160 L245 182" stroke="#a8c0cc" stroke-width="1.5" opacity="0.5"/>
+    <rect x="22" y="236" width="256" height="26" fill="#141f26"/>
+    <ellipse cx="149" cy="238" rx="52" ry="10" fill="#2a3a44"/>
+    <ellipse cx="149" cy="236" rx="30" ry="6" fill="#3a4c57"/>
+  </g>
+  <rect x="22" y="272" width="256" height="22" rx="4" fill="#8f7fd0" fill-opacity="0.14"/>
+  <text x="150" y="287" text-anchor="middle" font-size="11" letter-spacing="2" fill="#b3a4ea">スペルカード</text>
+  <text x="150" y="328" text-anchor="middle" font-size="16" font-weight="bold" fill="#f0ebff">護衛を3体倒す</text>
+  <line x1="60" y1="358" x2="240" y2="358" stroke="#8f7fd0" stroke-opacity="0.35"/>
+  <text x="150" y="384" text-anchor="middle" font-size="11" fill="#8f83b8">「嵐は誰も選ばない」</text>
+</svg>

@@ -1,0 +1,40 @@
+<svg viewBox="0 0 300 420" xmlns="http://www.w3.org/2000/svg" font-family="'Hiragino Mincho ProN','Yu Mincho','Noto Serif JP',serif">
+  <defs>
+    <linearGradient id="gu-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2b3d52"/><stop offset="1" stop-color="#0e1620"/>
+    </linearGradient>
+    <radialGradient id="gu-art" cx="0.5" cy="0.4" r="0.85">
+      <stop offset="0" stop-color="#33475e"/><stop offset="0.65" stop-color="#1c2938"/><stop offset="1" stop-color="#0e1620"/>
+    </radialGradient>
+    <clipPath id="gu-clip"><rect x="22" y="66" width="256" height="196" rx="8"/></clipPath>
+  </defs>
+  <rect x="4" y="4" width="292" height="412" rx="16" fill="url(#gu-bg)" stroke="#c9a227" stroke-width="3"/>
+  <rect x="11" y="11" width="278" height="398" rx="11" fill="none" stroke="#c9a227" stroke-opacity="0.4"/>
+  <text x="150" y="42" text-anchor="middle" font-size="24" font-weight="bold" fill="#f5e9c8">護 衛</text>
+  <text x="150" y="59" text-anchor="middle" font-size="10" letter-spacing="4" fill="#d8b95a" font-family="Georgia,serif">GUARD</text>
+  <rect x="22" y="66" width="256" height="196" rx="8" fill="url(#gu-art)" stroke="#c9a227" stroke-opacity="0.6"/>
+  <g clip-path="url(#gu-clip)">
+    <line x1="70" y1="248" x2="128" y2="96" stroke="#8a7248" stroke-width="4"/>
+    <polygon points="128,96 122,84 136,88" fill="#c2d0de"/>
+    <line x1="230" y1="248" x2="172" y2="96" stroke="#8a7248" stroke-width="4"/>
+    <polygon points="172,96 178,84 164,88" fill="#c2d0de"/>
+    <path d="M96 128 C114 128 124 138 124 154 C124 184 108 204 96 216 C84 204 68 184 68 154 C68 138 78 128 96 128 Z" fill="#5a6c82" stroke="#93a6bc" stroke-width="2.5"/>
+    <circle cx="96" cy="160" r="7" fill="#8a7248"/>
+    <path d="M204 128 C222 128 232 138 232 154 C232 184 216 204 204 216 C192 204 176 184 176 154 C176 138 186 128 204 128 Z" fill="#5a6c82" stroke="#93a6bc" stroke-width="2.5"/>
+    <circle cx="204" cy="160" r="7" fill="#8a7248"/>
+    <path d="M150 108 C176 108 190 121 190 143 C190 183 168 210 150 226 C132 210 110 183 110 143 C110 121 124 108 150 108 Z" fill="#7f93ad" stroke="#d6e2ee" stroke-width="3"/>
+    <line x1="150" y1="116" x2="150" y2="218" stroke="#5a6c82" stroke-width="3"/>
+    <line x1="118" y1="150" x2="182" y2="150" stroke="#5a6c82" stroke-width="3"/>
+    <circle cx="150" cy="150" r="12" fill="#c9a227" stroke="#e8c34a" stroke-width="2"/>
+    <circle cx="128" cy="126" r="2" fill="#d6e2ee"/>
+    <circle cx="172" cy="126" r="2" fill="#d6e2ee"/>
+    <circle cx="150" cy="112" r="2" fill="#d6e2ee"/>
+    <ellipse cx="150" cy="246" rx="100" ry="14" fill="#0a111a" opacity="0.85"/>
+  </g>
+  <rect x="22" y="272" width="256" height="22" rx="4" fill="#c9a227" fill-opacity="0.14"/>
+  <text x="150" y="287" text-anchor="middle" font-size="11" letter-spacing="2" fill="#d8b95a">フィールドカード</text>
+  <text x="150" y="318" text-anchor="middle" font-size="14" font-weight="bold" fill="#f5efdd">カードの上のダイスの数が護衛の人数</text>
+  <text x="150" y="340" text-anchor="middle" font-size="14" font-weight="bold" fill="#f5efdd">初期値10から始まる</text>
+  <line x1="60" y1="360" x2="240" y2="360" stroke="#c9a227" stroke-opacity="0.4"/>
+  <text x="150" y="386" text-anchor="middle" font-size="11" fill="#8fa0b5">「盾の壁は王の眠りを守る」</text>
+</svg>

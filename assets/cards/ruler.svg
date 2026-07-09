@@ -1,0 +1,46 @@
+<svg viewBox="0 0 300 420" xmlns="http://www.w3.org/2000/svg" font-family="'Hiragino Mincho ProN','Yu Mincho','Noto Serif JP',serif">
+  <defs>
+    <linearGradient id="ru-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3a1d1d"/><stop offset="1" stop-color="#160a0a"/>
+    </linearGradient>
+    <radialGradient id="ru-art" cx="0.5" cy="0.4" r="0.85">
+      <stop offset="0" stop-color="#58201e"/><stop offset="0.65" stop-color="#301010"/><stop offset="1" stop-color="#1c0808"/>
+    </radialGradient>
+    <clipPath id="ru-clip"><rect x="22" y="66" width="256" height="196" rx="8"/></clipPath>
+  </defs>
+  <rect x="4" y="4" width="292" height="412" rx="16" fill="url(#ru-bg)" stroke="#c9a227" stroke-width="3"/>
+  <rect x="11" y="11" width="278" height="398" rx="11" fill="none" stroke="#c9a227" stroke-opacity="0.4"/>
+  <text x="150" y="42" text-anchor="middle" font-size="24" font-weight="bold" fill="#f5e9c8">君 主</text>
+  <text x="150" y="59" text-anchor="middle" font-size="10" letter-spacing="4" fill="#d8b95a" font-family="Georgia,serif">RULER</text>
+  <rect x="22" y="66" width="256" height="196" rx="8" fill="url(#ru-art)" stroke="#c9a227" stroke-opacity="0.6"/>
+  <g clip-path="url(#ru-clip)">
+    <rect x="36" y="76" width="14" height="186" fill="#3a2412"/>
+    <rect x="32" y="72" width="22" height="8" fill="#c9a227" opacity="0.8"/>
+    <rect x="250" y="76" width="14" height="186" fill="#3a2412"/>
+    <rect x="246" y="72" width="22" height="8" fill="#c9a227" opacity="0.8"/>
+    <path d="M108 215 L108 100 C108 84 192 84 192 100 L192 215 Z" fill="#4a2c14" stroke="#c9a227" stroke-width="2"/>
+    <circle cx="108" cy="96" r="7" fill="#c9a227"/>
+    <circle cx="192" cy="96" r="7" fill="#c9a227"/>
+    <polygon points="105,262 195,262 172,215 128,215" fill="#8a1f1f"/>
+    <polygon points="121,262 179,262 166,215 134,215" fill="#a82828"/>
+    <path d="M128 215 L128 172 C128 152 172 152 172 172 L172 215 Z" fill="#6b1f1f"/>
+    <path d="M128 178 C136 172 164 172 172 178" fill="none" stroke="#c9a227" stroke-width="2.5" opacity="0.9"/>
+    <circle cx="150" cy="138" r="15" fill="#2a1810"/>
+    <path d="M135 126 L135 110 L142 119 L150 106 L158 119 L165 110 L165 126 Z" fill="#e8c34a" stroke="#a07818" stroke-width="1.5"/>
+    <circle cx="141" cy="122" r="2.4" fill="#c03434"/>
+    <circle cx="150" cy="122" r="2.4" fill="#2a5aa8"/>
+    <circle cx="159" cy="122" r="2.4" fill="#c03434"/>
+    <line x1="178" y1="200" x2="196" y2="128" stroke="#c9a227" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="197" cy="123" r="7" fill="#d84a4a" stroke="#e8c34a" stroke-width="2"/>
+    <path d="M62 116 C66 108 74 108 78 116 C74 124 66 124 62 116 Z" fill="#e8944a" opacity="0.85"/>
+    <rect x="67" y="122" width="6" height="14" fill="#3a2412"/>
+    <path d="M222 116 C226 108 234 108 238 116 C234 124 226 124 222 116 Z" fill="#e8944a" opacity="0.85"/>
+    <rect x="227" y="122" width="6" height="14" fill="#3a2412"/>
+  </g>
+  <rect x="22" y="272" width="256" height="22" rx="4" fill="#c9a227" fill-opacity="0.14"/>
+  <text x="150" y="287" text-anchor="middle" font-size="11" letter-spacing="2" fill="#d8b95a">フィールドカード</text>
+  <text x="150" y="318" text-anchor="middle" font-size="14" font-weight="bold" fill="#f5efdd">護衛がいない場合、ストライカーに</text>
+  <text x="150" y="340" text-anchor="middle" font-size="14" font-weight="bold" fill="#f5efdd">攻撃されるとゲームに敗北する</text>
+  <line x1="60" y1="360" x2="240" y2="360" stroke="#c9a227" stroke-opacity="0.4"/>
+  <text x="150" y="386" text-anchor="middle" font-size="11" fill="#a88d5a">「王が倒れる時、国は滅ぶ」</text>
+</svg>

@@ -1,0 +1,632 @@
+<title>wargrace カード一覧</title>
+<style>
+:root{
+  --ground:#14101f; --panel:#1d1730; --ink:#ece7f5; --muted:#9c92bd;
+  --gold:#c9a227; --violet:#9b8ae0; --line:rgba(155,138,224,.25);
+}
+@media (prefers-color-scheme: light){
+  :root{ --ground:#efeae0; --panel:#e4dccb; --ink:#2c2440; --muted:#6b6284; --line:rgba(90,70,140,.25); }
+}
+:root[data-theme="dark"]{ --ground:#14101f; --panel:#1d1730; --ink:#ece7f5; --muted:#9c92bd; --line:rgba(155,138,224,.25); }
+:root[data-theme="light"]{ --ground:#efeae0; --panel:#e4dccb; --ink:#2c2440; --muted:#6b6284; --line:rgba(90,70,140,.25); }
+body{ background:var(--ground); color:var(--ink);
+  font-family:'Hiragino Mincho ProN','Yu Mincho','Noto Serif JP',serif;
+  margin:0; padding:48px 32px 80px; }
+.wrap{ max-width:1080px; margin:0 auto; }
+header{ text-align:center; margin-bottom:56px; }
+h1{ font-size:44px; letter-spacing:.28em; margin:0 0 6px; color:var(--gold); font-weight:600; text-wrap:balance; }
+header p{ margin:0; color:var(--muted); letter-spacing:.14em; font-size:14px; }
+header .rule{ width:120px; height:1px; background:var(--gold); opacity:.6; margin:20px auto 0; }
+section{ margin-bottom:64px; }
+h2{ font-size:20px; letter-spacing:.2em; font-weight:600; margin:0; color:var(--ink); }
+.sec-head{ display:flex; align-items:baseline; gap:14px; border-bottom:1px solid var(--line); padding-bottom:10px; margin-bottom:28px; }
+.sec-head .count{ color:var(--muted); font-size:13px; letter-spacing:.08em; }
+.grid{ display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); gap:28px; }
+.grid.narrow{ grid-template-columns:repeat(auto-fill,minmax(220px,240px)); justify-content:center; }
+figure{ margin:0; }
+figure svg{ width:100%; height:auto; display:block; border-radius:12px;
+  box-shadow:0 10px 28px rgba(0,0,0,.45); }
+figcaption{ text-align:center; margin-top:10px; color:var(--muted); font-size:13px; letter-spacing:.1em; }
+</style>
+<div class="wrap">
+<header>
+  <h1>wargrace</h1>
+  <p>カードイラスト一覧 ── 全11種＋裏面（スペル30枚・フィールド10枚）</p>
+  <div class="rule"></div>
+</header>
+<section><div class="sec-head"><h2>カード裏面</h2><span class="count">全カード共通</span></div><div class="grid narrow">
+<figure>
+<svg viewBox="0 0 300 420" xmlns="http://www.w3.org/2000/svg" font-family="Georgia,'Times New Roman',serif">
+  <defs>
+    <radialGradient id="bk-bg" cx="0.5" cy="0.5" r="0.75">
+      <stop offset="0" stop-color="#2b2150"/><stop offset="0.7" stop-color="#1a1333"/><stop offset="1" stop-color="#0e0a1e"/>
+    </radialGradient>
+    <radialGradient id="bk-glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#9b8ae0" stop-opacity="0.28"/><stop offset="1" stop-color="#9b8ae0" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="bk-lattice" width="26" height="26" patternUnits="userSpaceOnUse" patternTransform="rotate(45 0 0)">
+      <rect width="26" height="26" fill="none"/>
+      <path d="M0 0 H26 M0 13 H26" stroke="#9b8ae0" stroke-opacity="0.10" stroke-width="1"/>
+      <path d="M0 0 V26 M13 0 V26" stroke="#9b8ae0" stroke-opacity="0.10" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect x="4" y="4" width="292" height="412" rx="16" fill="url(#bk-bg)" stroke="#c9a227" stroke-width="3"/>
+  <rect x="12" y="12" width="276" height="396" rx="11" fill="url(#bk-lattice)" stroke="#c9a227" stroke-opacity="0.55" stroke-width="1.5"/>
+  <rect x="19" y="19" width="262" height="382" rx="8" fill="none" stroke="#9b8ae0" stroke-opacity="0.3"/>
+
+  <!-- corner ornaments (4x rotational symmetry) -->
+  <g stroke="#c9a227" stroke-width="2" fill="none" stroke-opacity="0.85">
+    <path d="M26 54 C26 38 38 26 54 26"/>
+    <path d="M274 54 C274 38 262 26 246 26"/>
+    <path d="M26 366 C26 382 38 394 54 394"/>
+    <path d="M274 366 C274 382 262 394 246 394"/>
+  </g>
+  <g fill="#c9a227" opacity="0.9">
+    <path d="M40 40 L46 34 L52 40 L46 46 Z"/>
+    <path d="M260 40 L254 34 L248 40 L254 46 Z"/>
+    <path d="M40 380 L46 374 L52 380 L46 386 Z"/>
+    <path d="M260 380 L254 374 L248 380 L254 386 Z"/>
+  </g>
+
+  <!-- central medallion -->
+  <circle cx="150" cy="210" r="98" fill="url(#bk-glow)"/>
+  <circle cx="150" cy="210" r="78" fill="none" stroke="#c9a227" stroke-width="2.5"/>
+  <circle cx="150" cy="210" r="70" fill="none" stroke="#9b8ae0" stroke-opacity="0.5" stroke-width="1.5" stroke-dasharray="3 7"/>
+  <circle cx="150" cy="210" r="86" fill="none" stroke="#c9a227" stroke-opacity="0.4"/>
+
+  <!-- sigil: shield, crossed sword & staff, crown -->
+  <path d="M150 168 C172 168 184 178 184 196 C184 228 166 250 150 262 C134 250 116 228 116 196 C116 178 128 168 150 168 Z"
+        fill="#241b42" stroke="#9b8ae0" stroke-width="2"/>
+  <line x1="122" y1="182" x2="178" y2="240" stroke="#e8eef5" stroke-width="4.5" stroke-linecap="round"/>
+  <line x1="129" y1="176" x2="139" y2="188" stroke="#c9a227" stroke-width="4" stroke-linecap="round"/>
+  <line x1="178" y1="182" x2="122" y2="240" stroke="#b39aE8" stroke-width="4.5" stroke-linecap="round"/>
+  <circle cx="178" cy="182" r="6" fill="#cf7bff" stroke="#e8dcff" stroke-width="1.5"/>
+  <path d="M132 148 L132 130 L141 140 L150 126 L159 140 L168 130 L168 148 Z"
+        fill="#e8c34a" stroke="#a07818" stroke-width="1.5"/>
+  <circle cx="139" cy="143" r="2.4" fill="#c03434"/>
+  <circle cx="150" cy="143" r="2.4" fill="#2a5aa8"/>
+  <circle cx="161" cy="143" r="2.4" fill="#c03434"/>
+
+  <!-- dice pips: guard count motif -->
+  <g fill="#c9a227" opacity="0.75">
+    <circle cx="150" cy="284" r="3"/>
+    <circle cx="136" cy="284" r="2"/>
+    <circle cx="164" cy="284" r="2"/>
+  </g>
+
+  <!-- title -->
+  <text x="150" y="90" text-anchor="middle" font-size="26" letter-spacing="7" fill="#e8c34a" font-weight="bold">WARGRACE</text>
+  <line x1="70" y1="104" x2="230" y2="104" stroke="#c9a227" stroke-opacity="0.6"/>
+  <text x="150" y="122" text-anchor="middle" font-size="10" letter-spacing="5" fill="#9b8ae0">SPELL &#183; GUARD &#183; STRIKE</text>
+
+  <text x="150" y="330" text-anchor="middle" font-size="13" letter-spacing="6" fill="#9b8ae0" opacity="0.85"
+        font-family="'Hiragino Mincho ProN','Yu Mincho',serif">ウォーグレイス</text>
+  <line x1="94" y1="346" x2="206" y2="346" stroke="#c9a227" stroke-opacity="0.5"/>
+  <path d="M144 358 L150 352 L156 358 L150 364 Z" fill="#c9a227" opacity="0.8"/>
+</svg>
+<figcaption>裏面 ─ CARD BACK</figcaption></figure>
+</div></section>
+<section><div class="sec-head"><h2>スペルカード</h2><span class="count">6種 × 各5枚 ＝ 30枚</span></div><div class="grid">
+<figure>
+<svg viewBox="0 0 300 420" xmlns="http://www.w3.org/2000/svg" font-family="'Hiragino Mincho ProN','Yu Mincho','Noto Serif JP',serif">
+  <defs>
+    <linearGradient id="cu-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2b1f4e"/><stop offset="1" stop-color="#120c24"/>
+    </linearGradient>
+    <radialGradient id="cu-art" cx="0.5" cy="0.45" r="0.8">
+      <stop offset="0" stop-color="#43265f"/><stop offset="0.6" stop-color="#241238"/><stop offset="1" stop-color="#0d0618"/>
+    </radialGradient>
+    <radialGradient id="cu-aura" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#a05ce0" stop-opacity="0.7"/><stop offset="1" stop-color="#a05ce0" stop-opacity="0"/>
+    </radialGradient>
+    <clipPath id="cu-clip"><rect x="22" y="66" width="256" height="196" rx="8"/></clipPath>
+  </defs>
+  <rect x="4" y="4" width="292" height="412" rx="16" fill="url(#cu-bg)" stroke="#8f7fd0" stroke-width="3"/>
+  <rect x="11" y="11" width="278" height="398" rx="11" fill="none" stroke="#8f7fd0" stroke-opacity="0.35"/>
+  <text x="150" y="42" text-anchor="middle" font-size="24" font-weight="bold" fill="#ede8ff">呪 詛</text>
+  <text x="150" y="59" text-anchor="middle" font-size="10" letter-spacing="4" fill="#b3a4ea" font-family="Georgia,serif">CURSE</text>
+  <rect x="22" y="66" width="256" height="196" rx="8" fill="url(#cu-art)" stroke="#8f7fd0" stroke-opacity="0.6"/>
+  <g clip-path="url(#cu-clip)">
+    <ellipse cx="150" cy="160" rx="100" ry="82" fill="url(#cu-aura)"/>
+    <path d="M42 66 C58 108 36 142 62 192" stroke="#6a3fa0" stroke-width="5" fill="none" opacity="0.55" stroke-linecap="round"/>
+    <path d="M258 66 C244 104 266 150 240 196" stroke="#6a3fa0" stroke-width="5" fill="none" opacity="0.55" stroke-linecap="round"/>
+    <path d="M90 66 C98 92 84 112 96 134" stroke="#54307e" stroke-width="3.5" fill="none" opacity="0.5" stroke-linecap="round"/>
+    <path d="M212 66 C204 90 218 114 206 138" stroke="#54307e" stroke-width="3.5" fill="none" opacity="0.5" stroke-linecap="round"/>
+    <ellipse cx="150" cy="150" rx="48" ry="44" fill="#ece4d4"/>
+    <rect x="128" y="182" width="44" height="30" rx="9" fill="#ece4d4"/>
+    <ellipse cx="132" cy="152" rx="12" ry="15" fill="#1a0d2e"/>
+    <ellipse cx="168" cy="152" rx="12" ry="15" fill="#1a0d2e"/>
+    <circle cx="132" cy="154" r="3.5" fill="#cf7bff"/>
+    <circle cx="168" cy="154" r="3.5" fill="#cf7bff"/>
+    <path d="M150 166 L143 182 L157 182 Z" fill="#1a0d2e"/>
+    <path d="M136 186 L136 208 M144 188 L144 210 M152 188 L152 210 M160 188 L160 210 M166 186 L166 206" stroke="#1a0d2e" stroke-width="2"/>
+    <path d="M150 108 L145 124 L152 137" stroke="#8a7f6a" stroke-width="1.5" fill="none"/>
+    <path d="M60 220 L66 208 L72 220 L66 216 Z" fill="#cf7bff" opacity="0.8"/>
+    <path d="M236 210 L242 198 L248 210 L242 206 Z" fill="#cf7bff" opacity="0.7"/>
+    <path d="M78 100 L84 100 M81 96 L81 108" stroke="#cf7bff" stroke-width="2" opacity="0.7"/>
+    <path d="M222 92 L230 92 M226 88 L226 100" stroke="#cf7bff" stroke-width="2" opacity="0.6"/>
+    <ellipse cx="150" cy="248" rx="90" ry="14" fill="#0d0618" opacity="0.8"/>
+  </g>
+  <rect x="22" y="272" width="256" height="22" rx="4" fill="#8f7fd0" fill-opacity="0.14"/>
+  <text x="150" y="287" text-anchor="middle" font-size="11" letter-spacing="2" fill="#b3a4ea">スペルカード</text>
+  <text x="150" y="328" text-anchor="middle" font-size="16" font-weight="bold" fill="#f0ebff">ストライカーを1体倒す</text>
+  <line x1="60" y1="358" x2="240" y2="358" stroke="#8f7fd0" stroke-opacity="0.35"/>
+  <text x="150" y="384" text-anchor="middle" font-size="11" fill="#8f83b8">「闇は名を呼び、命を蝕む」</text>
+</svg>
+<figcaption>呪詛 ─ CURSE ×5</figcaption></figure>
+<figure>
+<svg viewBox="0 0 300 420" xmlns="http://www.w3.org/2000/svg" font-family="'Hiragino Mincho ProN','Yu Mincho','Noto Serif JP',serif">
+  <defs>
+    <linearGradient id="cy-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2b1f4e"/><stop offset="1" stop-color="#120c24"/>
+    </linearGradient>
+    <linearGradient id="cy-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#22333d"/><stop offset="0.5" stop-color="#3a5561"/><stop offset="1" stop-color="#101c22"/>
+    </linearGradient>
+    <clipPath id="cy-clip"><rect x="22" y="66" width="256" height="196" rx="8"/></clipPath>
+  </defs>
+  <rect x="4" y="4" width="292" height="412" rx="16" fill="url(#cy-bg)" stroke="#8f7fd0" stroke-width="3"/>
+  <rect x="11" y="11" width="278" height="398" rx="11" fill="none" stroke="#8f7fd0" stroke-opacity="0.35"/>
+  <text x="150" y="42" text-anchor="middle" font-size="24" font-weight="bold" fill="#ede8ff">竜 巻</text>
+  <text x="150" y="59" text-anchor="middle" font-size="10" letter-spacing="4" fill="#b3a4ea" font-family="Georgia,serif">CYCLONE</text>
+  <rect x="22" y="66" width="256" height="196" rx="8" fill="url(#cy-sky)" stroke="#8f7fd0" stroke-opacity="0.6"/>
+  <g clip-path="url(#cy-clip)">
+    <ellipse cx="90" cy="80" rx="70" ry="18" fill="#1c2b33"/>
+    <ellipse cx="200" cy="74" rx="80" ry="20" fill="#22333d"/>
+    <ellipse cx="150" cy="88" rx="110" ry="16" fill="#182730" opacity="0.9"/>
+    <polyline points="222,92 204,126 218,128 196,164" fill="none" stroke="#ffe98a" stroke-width="3" stroke-linejoin="round" opacity="0.9"/>
+    <ellipse cx="150" cy="102" rx="86" ry="16" fill="#8fa9b5" stroke="#c2d4dc" stroke-opacity="0.5"/>
+    <ellipse cx="144" cy="128" rx="66" ry="13" fill="#7d97a4" stroke="#c2d4dc" stroke-opacity="0.45"/>
+    <ellipse cx="153" cy="153" rx="49" ry="11" fill="#6b8492" stroke="#c2d4dc" stroke-opacity="0.4"/>
+    <ellipse cx="146" cy="177" rx="34" ry="9" fill="#5a7280" stroke="#c2d4dc" stroke-opacity="0.35"/>
+    <ellipse cx="152" cy="199" rx="21" ry="7" fill="#4a5f6c" stroke="#c2d4dc" stroke-opacity="0.3"/>
+    <ellipse cx="149" cy="218" rx="11" ry="5" fill="#3a4c57"/>
+    <rect x="68" y="118" width="12" height="6" fill="#4a3a26" transform="rotate(24 74 121)"/>
+    <rect x="226" y="140" width="14" height="5" fill="#4a3a26" transform="rotate(-30 233 142)"/>
+    <rect x="84" y="176" width="10" height="5" fill="#54422c" transform="rotate(-18 89 178)"/>
+    <rect x="212" y="108" width="9" height="9" fill="#3f3220" transform="rotate(40 216 112)"/>
+    <path d="M52 96 L44 120 M64 150 L57 170 M244 96 L237 118 M252 160 L245 182" stroke="#a8c0cc" stroke-width="1.5" opacity="0.5"/>
+    <rect x="22" y="236" width="256" height="26" fill="#141f26"/>
+    <ellipse cx="149" cy="238" rx="52" ry="10" fill="#2a3a44"/>
+    <ellipse cx="149" cy="236" rx="30" ry="6" fill="#3a4c57"/>
+  </g>
+  <rect x="22" y="272" width="256" height="22" rx="4" fill="#8f7fd0" fill-opacity="0.14"/>
+  <text x="150" y="287" text-anchor="middle" font-size="11" letter-spacing="2" fill="#b3a4ea">スペルカード</text>
+  <text x="150" y="328" text-anchor="middle" font-size="16" font-weight="bold" fill="#f0ebff">護衛を3体倒す</text>
+  <line x1="60" y1="358" x2="240" y2="358" stroke="#8f7fd0" stroke-opacity="0.35"/>
+  <text x="150" y="384" text-anchor="middle" font-size="11" fill="#8f83b8">「嵐は誰も選ばない」</text>
+</svg>
+<figcaption>竜巻 ─ CYCLONE ×5</figcaption></figure>
+<figure>
+<svg viewBox="0 0 300 420" xmlns="http://www.w3.org/2000/svg" font-family="'Hiragino Mincho ProN','Yu Mincho','Noto Serif JP',serif">
+  <defs>
+    <linearGradient id="hl-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2b1f4e"/><stop offset="1" stop-color="#120c24"/>
+    </linearGradient>
+    <radialGradient id="hl-art" cx="0.5" cy="0.42" r="0.85">
+      <stop offset="0" stop-color="#fdf3cf"/><stop offset="0.35" stop-color="#caa84e"/><stop offset="0.75" stop-color="#4a3a14"/><stop offset="1" stop-color="#241c08"/>
+    </radialGradient>
+    <linearGradient id="hl-beam" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.75"/><stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+    <clipPath id="hl-clip"><rect x="22" y="66" width="256" height="196" rx="8"/></clipPath>
+  </defs>
+  <rect x="4" y="4" width="292" height="412" rx="16" fill="url(#hl-bg)" stroke="#8f7fd0" stroke-width="3"/>
+  <rect x="11" y="11" width="278" height="398" rx="11" fill="none" stroke="#8f7fd0" stroke-opacity="0.35"/>
+  <text x="150" y="42" text-anchor="middle" font-size="24" font-weight="bold" fill="#ede8ff">治 癒</text>
+  <text x="150" y="59" text-anchor="middle" font-size="10" letter-spacing="4" fill="#b3a4ea" font-family="Georgia,serif">HEAL</text>
+  <rect x="22" y="66" width="256" height="196" rx="8" fill="url(#hl-art)" stroke="#8f7fd0" stroke-opacity="0.6"/>
+  <g clip-path="url(#hl-clip)">
+    <rect x="118" y="66" width="64" height="196" fill="url(#hl-beam)" opacity="0.55"/>
+    <path d="M126 152 C92 130 68 140 56 168 C82 160 94 168 104 184 C111 170 118 160 126 156 Z" fill="#fdf6e2" opacity="0.92"/>
+    <path d="M128 166 C104 156 86 162 78 182 C96 177 106 184 112 196 C117 184 122 172 128 168 Z" fill="#f2e2b0" opacity="0.85"/>
+    <path d="M174 152 C208 130 232 140 244 168 C218 160 206 168 196 184 C189 170 182 160 174 156 Z" fill="#fdf6e2" opacity="0.92"/>
+    <path d="M172 166 C196 156 214 162 222 182 C204 177 194 184 188 196 C183 184 178 172 172 168 Z" fill="#f2e2b0" opacity="0.85"/>
+    <circle cx="150" cy="150" r="30" fill="none" stroke="#ffffff" stroke-opacity="0.6" stroke-width="2"/>
+    <circle cx="150" cy="150" r="21" fill="#fff8e0"/>
+    <rect x="146" y="132" width="8" height="37" rx="3" fill="#caa84e"/>
+    <rect x="131.5" y="146.5" width="37" height="8" rx="3" fill="#caa84e"/>
+    <path d="M150 84 L154 94 L150 104 L146 94 Z" fill="#ffffff" opacity="0.9"/>
+    <path d="M104 108 L107 115 L104 122 L101 115 Z" fill="#ffffff" opacity="0.75"/>
+    <path d="M198 100 L201 107 L198 114 L195 107 Z" fill="#ffffff" opacity="0.75"/>
+    <circle cx="122" cy="126" r="2.5" fill="#ffffff" opacity="0.8"/>
+    <circle cx="182" cy="120" r="2" fill="#ffffff" opacity="0.7"/>
+    <circle cx="138" cy="98" r="1.8" fill="#ffffff" opacity="0.65"/>
+    <circle cx="166" cy="92" r="2.2" fill="#ffffff" opacity="0.7"/>
+    <path d="M96 240 C110 220 132 212 150 212 C168 212 190 220 204 240 C186 230 166 226 150 226 C134 226 114 230 96 240 Z" fill="#3a2c0e"/>
+    <ellipse cx="150" cy="248" rx="92" ry="12" fill="#241c08" opacity="0.85"/>
+  </g>
+  <rect x="22" y="272" width="256" height="22" rx="4" fill="#8f7fd0" fill-opacity="0.14"/>
+  <text x="150" y="287" text-anchor="middle" font-size="11" letter-spacing="2" fill="#b3a4ea">スペルカード</text>
+  <text x="150" y="328" text-anchor="middle" font-size="16" font-weight="bold" fill="#f0ebff">護衛を3体復活させる</text>
+  <line x1="60" y1="358" x2="240" y2="358" stroke="#8f7fd0" stroke-opacity="0.35"/>
+  <text x="150" y="384" text-anchor="middle" font-size="11" fill="#8f83b8">「光は倒れし者を再び立たせる」</text>
+</svg>
+<figcaption>治癒 ─ HEAL ×5</figcaption></figure>
+<figure>
+<svg viewBox="0 0 300 420" xmlns="http://www.w3.org/2000/svg" font-family="'Hiragino Mincho ProN','Yu Mincho','Noto Serif JP',serif">
+  <defs>
+    <linearGradient id="ca-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2b1f4e"/><stop offset="1" stop-color="#120c24"/>
+    </linearGradient>
+    <radialGradient id="ca-art" cx="0.5" cy="0.5" r="0.75">
+      <stop offset="0" stop-color="#1d3d63"/><stop offset="0.7" stop-color="#0c1c33"/><stop offset="1" stop-color="#060d18"/>
+    </radialGradient>
+    <radialGradient id="ca-flash" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#9fe4ff" stop-opacity="0.55"/><stop offset="1" stop-color="#9fe4ff" stop-opacity="0"/>
+    </radialGradient>
+    <clipPath id="ca-clip"><rect x="22" y="66" width="256" height="196" rx="8"/></clipPath>
+  </defs>
+  <rect x="4" y="4" width="292" height="412" rx="16" fill="url(#ca-bg)" stroke="#8f7fd0" stroke-width="3"/>
+  <rect x="11" y="11" width="278" height="398" rx="11" fill="none" stroke="#8f7fd0" stroke-opacity="0.35"/>
+  <text x="150" y="42" text-anchor="middle" font-size="24" font-weight="bold" fill="#ede8ff">取 消</text>
+  <text x="150" y="59" text-anchor="middle" font-size="10" letter-spacing="4" fill="#b3a4ea" font-family="Georgia,serif">CANCEL</text>
+  <rect x="22" y="66" width="256" height="196" rx="8" fill="url(#ca-art)" stroke="#8f7fd0" stroke-opacity="0.6"/>
+  <g clip-path="url(#ca-clip)">
+    <circle cx="150" cy="164" r="72" fill="none" stroke="#3f8fc0" stroke-width="2.5" stroke-dasharray="26 8" opacity="0.85"/>
+    <circle cx="150" cy="164" r="60" fill="none" stroke="#35729c" stroke-width="1.5" stroke-dasharray="3 9" opacity="0.8"/>
+    <polygon points="150,110 197,191 103,191" fill="none" stroke="#35729c" stroke-width="1.5" opacity="0.55"/>
+    <polygon points="150,218 103,137 197,137" fill="none" stroke="#35729c" stroke-width="1.5" opacity="0.45"/>
+    <circle cx="150" cy="164" r="86" fill="url(#ca-flash)"/>
+    <line x1="98" y1="112" x2="202" y2="216" stroke="#7fdcff" stroke-width="11" stroke-linecap="round"/>
+    <line x1="202" y1="112" x2="98" y2="216" stroke="#7fdcff" stroke-width="11" stroke-linecap="round"/>
+    <line x1="98" y1="112" x2="202" y2="216" stroke="#ffffff" stroke-width="4" stroke-linecap="round"/>
+    <line x1="202" y1="112" x2="98" y2="216" stroke="#ffffff" stroke-width="4" stroke-linecap="round"/>
+    <polygon points="70,140 82,132 78,148" fill="#7fdcff" opacity="0.7"/>
+    <polygon points="228,150 218,142 224,158" fill="#7fdcff" opacity="0.7"/>
+    <polygon points="120,86 130,92 118,98" fill="#7fdcff" opacity="0.6"/>
+    <polygon points="186,238 176,230 188,228" fill="#7fdcff" opacity="0.6"/>
+    <polygon points="86,204 96,210 84,214" fill="#5ac8ff" opacity="0.5"/>
+    <path d="M56 100 L62 100 M59 97 L59 106" stroke="#5ac8ff" stroke-width="1.5" opacity="0.6"/>
+    <path d="M242 214 L248 214 M245 211 L245 220" stroke="#5ac8ff" stroke-width="1.5" opacity="0.6"/>
+  </g>
+  <rect x="22" y="272" width="256" height="22" rx="4" fill="#8f7fd0" fill-opacity="0.14"/>
+  <text x="150" y="287" text-anchor="middle" font-size="11" letter-spacing="2" fill="#b3a4ea">スペルカード</text>
+  <text x="150" y="328" text-anchor="middle" font-size="16" font-weight="bold" fill="#f0ebff">相手の呪文を無効化する</text>
+  <line x1="60" y1="358" x2="240" y2="358" stroke="#8f7fd0" stroke-opacity="0.35"/>
+  <text x="150" y="384" text-anchor="middle" font-size="11" fill="#8f83b8">「唱えられた言葉は、風に消えた」</text>
+</svg>
+<figcaption>取消 ─ CANCEL ×5</figcaption></figure>
+<figure>
+<svg viewBox="0 0 300 420" xmlns="http://www.w3.org/2000/svg" font-family="'Hiragino Mincho ProN','Yu Mincho','Noto Serif JP',serif">
+  <defs>
+    <linearGradient id="gr-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2b1f4e"/><stop offset="1" stop-color="#120c24"/>
+    </linearGradient>
+    <radialGradient id="gr-art" cx="0.5" cy="0.6" r="0.85">
+      <stop offset="0" stop-color="#1e5230"/><stop offset="0.6" stop-color="#0f2a16"/><stop offset="1" stop-color="#06130a"/>
+    </radialGradient>
+    <radialGradient id="gr-glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#baf5c8" stop-opacity="0.8"/><stop offset="1" stop-color="#baf5c8" stop-opacity="0"/>
+    </radialGradient>
+    <clipPath id="gr-clip"><rect x="22" y="66" width="256" height="196" rx="8"/></clipPath>
+  </defs>
+  <rect x="4" y="4" width="292" height="412" rx="16" fill="url(#gr-bg)" stroke="#8f7fd0" stroke-width="3"/>
+  <rect x="11" y="11" width="278" height="398" rx="11" fill="none" stroke="#8f7fd0" stroke-opacity="0.35"/>
+  <text x="150" y="42" text-anchor="middle" font-size="24" font-weight="bold" fill="#ede8ff">成 長</text>
+  <text x="150" y="59" text-anchor="middle" font-size="10" letter-spacing="4" fill="#b3a4ea" font-family="Georgia,serif">GROWTH</text>
+  <rect x="22" y="66" width="256" height="196" rx="8" fill="url(#gr-art)" stroke="#8f7fd0" stroke-opacity="0.6"/>
+  <g clip-path="url(#gr-clip)">
+    <path d="M22 240 C70 226 110 232 150 232 C190 232 230 226 278 240 L278 262 L22 262 Z" fill="#0a1c0e"/>
+    <ellipse cx="150" cy="236" rx="46" ry="10" fill="#143a1e"/>
+    <circle cx="150" cy="112" r="34" fill="url(#gr-glow)"/>
+    <path d="M150 232 C150 204 138 194 142 166 C145 146 155 136 152 112" fill="none" stroke="#3f9e58" stroke-width="6" stroke-linecap="round"/>
+    <path d="M143 192 C118 187 105 170 103 150 C125 157 137 170 142 184 Z" fill="#4ac06a"/>
+    <path d="M148 168 C172 160 186 166 194 146 C170 141 154 148 148 160 Z" fill="#3fae5e"/>
+    <path d="M144 210 C126 208 116 198 112 186 C128 190 138 198 144 204 Z" fill="#358f4e"/>
+    <ellipse cx="152" cy="108" rx="12" ry="16" fill="#baf5c8"/>
+    <ellipse cx="152" cy="110" rx="6" ry="9" fill="#e8ffe9"/>
+    <path d="M152 226 C198 212 202 172 168 158 C138 146 134 120 158 106" fill="none" stroke="#8ef0a8" stroke-width="3" stroke-linecap="round" opacity="0.85"/>
+    <path d="M84 176 L90 164 L96 176 M87 164 L90 148" stroke="#8ef0a8" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.8"/>
+    <path d="M212 156 L218 144 L224 156 M215 144 L218 128" stroke="#8ef0a8" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.7"/>
+    <circle cx="112" cy="122" r="2.5" fill="#baf5c8" opacity="0.8"/>
+    <circle cx="196" cy="102" r="2" fill="#baf5c8" opacity="0.7"/>
+    <circle cx="128" cy="92" r="1.8" fill="#baf5c8" opacity="0.6"/>
+    <circle cx="176" cy="84" r="2.2" fill="#baf5c8" opacity="0.65"/>
+    <circle cx="150" cy="76" r="1.6" fill="#baf5c8" opacity="0.55"/>
+  </g>
+  <rect x="22" y="272" width="256" height="22" rx="4" fill="#8f7fd0" fill-opacity="0.14"/>
+  <text x="150" y="287" text-anchor="middle" font-size="11" letter-spacing="2" fill="#b3a4ea">スペルカード</text>
+  <text x="150" y="318" text-anchor="middle" font-size="15" font-weight="bold" fill="#f0ebff">戦場のストライカー1人の</text>
+  <text x="150" y="340" text-anchor="middle" font-size="15" font-weight="bold" fill="#f0ebff">エネルギーを1上げる</text>
+  <line x1="60" y1="360" x2="240" y2="360" stroke="#8f7fd0" stroke-opacity="0.35"/>
+  <text x="150" y="386" text-anchor="middle" font-size="11" fill="#8f83b8">「力は静かに満ちてゆく」</text>
+</svg>
+<figcaption>成長 ─ GROWTH ×5</figcaption></figure>
+<figure>
+<svg viewBox="0 0 300 420" xmlns="http://www.w3.org/2000/svg" font-family="'Hiragino Mincho ProN','Yu Mincho','Noto Serif JP',serif">
+  <defs>
+    <linearGradient id="ag-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2b1f4e"/><stop offset="1" stop-color="#120c24"/>
+    </linearGradient>
+    <radialGradient id="ag-art" cx="0.5" cy="0.45" r="0.85">
+      <stop offset="0" stop-color="#4a3a22"/><stop offset="0.65" stop-color="#2c2112"/><stop offset="1" stop-color="#1a1208"/>
+    </radialGradient>
+    <clipPath id="ag-clip"><rect x="22" y="66" width="256" height="196" rx="8"/></clipPath>
+  </defs>
+  <rect x="4" y="4" width="292" height="412" rx="16" fill="url(#ag-bg)" stroke="#8f7fd0" stroke-width="3"/>
+  <rect x="11" y="11" width="278" height="398" rx="11" fill="none" stroke="#8f7fd0" stroke-opacity="0.35"/>
+  <text x="150" y="42" text-anchor="middle" font-size="24" font-weight="bold" fill="#ede8ff">老 化</text>
+  <text x="150" y="59" text-anchor="middle" font-size="10" letter-spacing="4" fill="#b3a4ea" font-family="Georgia,serif">AGING</text>
+  <rect x="22" y="66" width="256" height="196" rx="8" fill="url(#ag-art)" stroke="#8f7fd0" stroke-opacity="0.6"/>
+  <g clip-path="url(#ag-clip)">
+    <circle cx="150" cy="160" r="84" fill="none" stroke="#d8c8a8" stroke-opacity="0.12" stroke-width="2"/>
+    <g stroke="#d8c8a8" stroke-opacity="0.14" stroke-width="2">
+      <line x1="150" y1="72" x2="150" y2="82"/><line x1="150" y1="238" x2="150" y2="248"/>
+      <line x1="62" y1="160" x2="72" y2="160"/><line x1="228" y1="160" x2="238" y2="160"/>
+      <line x1="88" y1="98" x2="95" y2="105"/><line x1="205" y1="215" x2="212" y2="222"/>
+      <line x1="212" y1="98" x2="205" y2="105"/><line x1="95" y1="215" x2="88" y2="222"/>
+    </g>
+    <rect x="108" y="95" width="84" height="11" rx="3" fill="#6b4a2a" stroke="#4a3018"/>
+    <rect x="108" y="212" width="84" height="11" rx="3" fill="#6b4a2a" stroke="#4a3018"/>
+    <line x1="116" y1="106" x2="116" y2="212" stroke="#5a3d20" stroke-width="5"/>
+    <line x1="184" y1="106" x2="184" y2="212" stroke="#5a3d20" stroke-width="5"/>
+    <path d="M124 106 L176 106 L153 159 L176 212 L124 212 L147 159 Z" fill="#d8c8a8" fill-opacity="0.09" stroke="#d8c8a8" stroke-width="2" stroke-opacity="0.75"/>
+    <path d="M136 124 L164 124 L151 152 L149 152 Z" fill="#d4b36a"/>
+    <line x1="150" y1="159" x2="150" y2="204" stroke="#d4b36a" stroke-width="2" stroke-dasharray="3 3"/>
+    <path d="M130 212 L170 212 L150 192 Z" fill="#d4b36a"/>
+    <circle cx="146" cy="180" r="1.4" fill="#d4b36a"/>
+    <circle cx="153" cy="170" r="1.2" fill="#d4b36a"/>
+    <path d="M212 138 C226 130 236 132 242 142 C232 146 222 146 214 142 Z" fill="#7a5a30" transform="rotate(28 226 140)"/>
+    <path d="M64 190 C76 182 86 184 92 194 C82 198 72 198 66 194 Z" fill="#6b4a26" transform="rotate(-20 78 192)"/>
+    <circle cx="88" cy="128" r="1.6" fill="#d8c8a8" opacity="0.4"/>
+    <circle cx="222" cy="182" r="1.4" fill="#d8c8a8" opacity="0.35"/>
+    <circle cx="200" cy="90" r="1.2" fill="#d8c8a8" opacity="0.3"/>
+  </g>
+  <rect x="22" y="272" width="256" height="22" rx="4" fill="#8f7fd0" fill-opacity="0.14"/>
+  <text x="150" y="287" text-anchor="middle" font-size="11" letter-spacing="2" fill="#b3a4ea">スペルカード</text>
+  <text x="150" y="318" text-anchor="middle" font-size="15" font-weight="bold" fill="#f0ebff">戦場のストライカー1人の</text>
+  <text x="150" y="340" text-anchor="middle" font-size="15" font-weight="bold" fill="#f0ebff">エネルギーを1下げる</text>
+  <line x1="60" y1="360" x2="240" y2="360" stroke="#8f7fd0" stroke-opacity="0.35"/>
+  <text x="150" y="386" text-anchor="middle" font-size="11" fill="#8f83b8">「時は誰にも等しく流れる」</text>
+</svg>
+<figcaption>老化 ─ AGING ×5</figcaption></figure>
+</div></section>
+<section><div class="sec-head"><h2>フィールドカード</h2><span class="count">各プレイヤー 1枚</span></div><div class="grid">
+<figure>
+<svg viewBox="0 0 300 420" xmlns="http://www.w3.org/2000/svg" font-family="'Hiragino Mincho ProN','Yu Mincho','Noto Serif JP',serif">
+  <defs>
+    <linearGradient id="ru-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3a1d1d"/><stop offset="1" stop-color="#160a0a"/>
+    </linearGradient>
+    <radialGradient id="ru-art" cx="0.5" cy="0.4" r="0.85">
+      <stop offset="0" stop-color="#58201e"/><stop offset="0.65" stop-color="#301010"/><stop offset="1" stop-color="#1c0808"/>
+    </radialGradient>
+    <clipPath id="ru-clip"><rect x="22" y="66" width="256" height="196" rx="8"/></clipPath>
+  </defs>
+  <rect x="4" y="4" width="292" height="412" rx="16" fill="url(#ru-bg)" stroke="#c9a227" stroke-width="3"/>
+  <rect x="11" y="11" width="278" height="398" rx="11" fill="none" stroke="#c9a227" stroke-opacity="0.4"/>
+  <text x="150" y="42" text-anchor="middle" font-size="24" font-weight="bold" fill="#f5e9c8">君 主</text>
+  <text x="150" y="59" text-anchor="middle" font-size="10" letter-spacing="4" fill="#d8b95a" font-family="Georgia,serif">RULER</text>
+  <rect x="22" y="66" width="256" height="196" rx="8" fill="url(#ru-art)" stroke="#c9a227" stroke-opacity="0.6"/>
+  <g clip-path="url(#ru-clip)">
+    <rect x="36" y="76" width="14" height="186" fill="#3a2412"/>
+    <rect x="32" y="72" width="22" height="8" fill="#c9a227" opacity="0.8"/>
+    <rect x="250" y="76" width="14" height="186" fill="#3a2412"/>
+    <rect x="246" y="72" width="22" height="8" fill="#c9a227" opacity="0.8"/>
+    <path d="M108 215 L108 100 C108 84 192 84 192 100 L192 215 Z" fill="#4a2c14" stroke="#c9a227" stroke-width="2"/>
+    <circle cx="108" cy="96" r="7" fill="#c9a227"/>
+    <circle cx="192" cy="96" r="7" fill="#c9a227"/>
+    <polygon points="105,262 195,262 172,215 128,215" fill="#8a1f1f"/>
+    <polygon points="121,262 179,262 166,215 134,215" fill="#a82828"/>
+    <path d="M128 215 L128 172 C128 152 172 152 172 172 L172 215 Z" fill="#6b1f1f"/>
+    <path d="M128 178 C136 172 164 172 172 178" fill="none" stroke="#c9a227" stroke-width="2.5" opacity="0.9"/>
+    <circle cx="150" cy="138" r="15" fill="#2a1810"/>
+    <path d="M135 126 L135 110 L142 119 L150 106 L158 119 L165 110 L165 126 Z" fill="#e8c34a" stroke="#a07818" stroke-width="1.5"/>
+    <circle cx="141" cy="122" r="2.4" fill="#c03434"/>
+    <circle cx="150" cy="122" r="2.4" fill="#2a5aa8"/>
+    <circle cx="159" cy="122" r="2.4" fill="#c03434"/>
+    <line x1="178" y1="200" x2="196" y2="128" stroke="#c9a227" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="197" cy="123" r="7" fill="#d84a4a" stroke="#e8c34a" stroke-width="2"/>
+    <path d="M62 116 C66 108 74 108 78 116 C74 124 66 124 62 116 Z" fill="#e8944a" opacity="0.85"/>
+    <rect x="67" y="122" width="6" height="14" fill="#3a2412"/>
+    <path d="M222 116 C226 108 234 108 238 116 C234 124 226 124 222 116 Z" fill="#e8944a" opacity="0.85"/>
+    <rect x="227" y="122" width="6" height="14" fill="#3a2412"/>
+  </g>
+  <rect x="22" y="272" width="256" height="22" rx="4" fill="#c9a227" fill-opacity="0.14"/>
+  <text x="150" y="287" text-anchor="middle" font-size="11" letter-spacing="2" fill="#d8b95a">フィールドカード</text>
+  <text x="150" y="318" text-anchor="middle" font-size="14" font-weight="bold" fill="#f5efdd">護衛がいない場合、ストライカーに</text>
+  <text x="150" y="340" text-anchor="middle" font-size="14" font-weight="bold" fill="#f5efdd">攻撃されるとゲームに敗北する</text>
+  <line x1="60" y1="360" x2="240" y2="360" stroke="#c9a227" stroke-opacity="0.4"/>
+  <text x="150" y="386" text-anchor="middle" font-size="11" fill="#a88d5a">「王が倒れる時、国は滅ぶ」</text>
+</svg>
+<figcaption>君主 ─ RULER ×2</figcaption></figure>
+<figure>
+<svg viewBox="0 0 300 420" xmlns="http://www.w3.org/2000/svg" font-family="'Hiragino Mincho ProN','Yu Mincho','Noto Serif JP',serif">
+  <defs>
+    <linearGradient id="gu-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2b3d52"/><stop offset="1" stop-color="#0e1620"/>
+    </linearGradient>
+    <radialGradient id="gu-art" cx="0.5" cy="0.4" r="0.85">
+      <stop offset="0" stop-color="#33475e"/><stop offset="0.65" stop-color="#1c2938"/><stop offset="1" stop-color="#0e1620"/>
+    </radialGradient>
+    <clipPath id="gu-clip"><rect x="22" y="66" width="256" height="196" rx="8"/></clipPath>
+  </defs>
+  <rect x="4" y="4" width="292" height="412" rx="16" fill="url(#gu-bg)" stroke="#c9a227" stroke-width="3"/>
+  <rect x="11" y="11" width="278" height="398" rx="11" fill="none" stroke="#c9a227" stroke-opacity="0.4"/>
+  <text x="150" y="42" text-anchor="middle" font-size="24" font-weight="bold" fill="#f5e9c8">護 衛</text>
+  <text x="150" y="59" text-anchor="middle" font-size="10" letter-spacing="4" fill="#d8b95a" font-family="Georgia,serif">GUARD</text>
+  <rect x="22" y="66" width="256" height="196" rx="8" fill="url(#gu-art)" stroke="#c9a227" stroke-opacity="0.6"/>
+  <g clip-path="url(#gu-clip)">
+    <line x1="70" y1="248" x2="128" y2="96" stroke="#8a7248" stroke-width="4"/>
+    <polygon points="128,96 122,84 136,88" fill="#c2d0de"/>
+    <line x1="230" y1="248" x2="172" y2="96" stroke="#8a7248" stroke-width="4"/>
+    <polygon points="172,96 178,84 164,88" fill="#c2d0de"/>
+    <path d="M96 128 C114 128 124 138 124 154 C124 184 108 204 96 216 C84 204 68 184 68 154 C68 138 78 128 96 128 Z" fill="#5a6c82" stroke="#93a6bc" stroke-width="2.5"/>
+    <circle cx="96" cy="160" r="7" fill="#8a7248"/>
+    <path d="M204 128 C222 128 232 138 232 154 C232 184 216 204 204 216 C192 204 176 184 176 154 C176 138 186 128 204 128 Z" fill="#5a6c82" stroke="#93a6bc" stroke-width="2.5"/>
+    <circle cx="204" cy="160" r="7" fill="#8a7248"/>
+    <path d="M150 108 C176 108 190 121 190 143 C190 183 168 210 150 226 C132 210 110 183 110 143 C110 121 124 108 150 108 Z" fill="#7f93ad" stroke="#d6e2ee" stroke-width="3"/>
+    <line x1="150" y1="116" x2="150" y2="218" stroke="#5a6c82" stroke-width="3"/>
+    <line x1="118" y1="150" x2="182" y2="150" stroke="#5a6c82" stroke-width="3"/>
+    <circle cx="150" cy="150" r="12" fill="#c9a227" stroke="#e8c34a" stroke-width="2"/>
+    <circle cx="128" cy="126" r="2" fill="#d6e2ee"/>
+    <circle cx="172" cy="126" r="2" fill="#d6e2ee"/>
+    <circle cx="150" cy="112" r="2" fill="#d6e2ee"/>
+    <ellipse cx="150" cy="246" rx="100" ry="14" fill="#0a111a" opacity="0.85"/>
+  </g>
+  <rect x="22" y="272" width="256" height="22" rx="4" fill="#c9a227" fill-opacity="0.14"/>
+  <text x="150" y="287" text-anchor="middle" font-size="11" letter-spacing="2" fill="#d8b95a">フィールドカード</text>
+  <text x="150" y="318" text-anchor="middle" font-size="14" font-weight="bold" fill="#f5efdd">カードの上のダイスの数が護衛の人数</text>
+  <text x="150" y="340" text-anchor="middle" font-size="14" font-weight="bold" fill="#f5efdd">初期値10から始まる</text>
+  <line x1="60" y1="360" x2="240" y2="360" stroke="#c9a227" stroke-opacity="0.4"/>
+  <text x="150" y="386" text-anchor="middle" font-size="11" fill="#8fa0b5">「盾の壁は王の眠りを守る」</text>
+</svg>
+<figcaption>護衛 ─ GUARD ×2</figcaption></figure>
+</div></section>
+<section><div class="sec-head"><h2>ストライカー</h2><span class="count">3種 × 各プレイヤー 1枚 ＝ 6枚</span></div><div class="grid">
+<figure>
+<svg viewBox="0 0 300 420" xmlns="http://www.w3.org/2000/svg" font-family="'Hiragino Mincho ProN','Yu Mincho','Noto Serif JP',serif">
+  <defs>
+    <linearGradient id="hr-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3a2c14"/><stop offset="1" stop-color="#171006"/>
+    </linearGradient>
+    <radialGradient id="hr-art" cx="0.5" cy="0.35" r="0.9">
+      <stop offset="0" stop-color="#f2d98a"/><stop offset="0.4" stop-color="#c99a3e"/><stop offset="0.78" stop-color="#6b4a1a"/><stop offset="1" stop-color="#2c1e08"/>
+    </radialGradient>
+    <radialGradient id="hr-gem" cx="0.35" cy="0.3" r="0.9">
+      <stop offset="0" stop-color="#9fe0ff"/><stop offset="1" stop-color="#1e5f9a"/>
+    </radialGradient>
+    <clipPath id="hr-clip"><rect x="22" y="66" width="256" height="196" rx="8"/></clipPath>
+  </defs>
+  <rect x="4" y="4" width="292" height="412" rx="16" fill="url(#hr-bg)" stroke="#c9a227" stroke-width="3"/>
+  <rect x="11" y="11" width="278" height="398" rx="11" fill="none" stroke="#c9a227" stroke-opacity="0.4"/>
+  <text x="150" y="42" text-anchor="middle" font-size="24" font-weight="bold" fill="#f5e9c8">英 雄</text>
+  <text x="150" y="59" text-anchor="middle" font-size="10" letter-spacing="4" fill="#d8b95a" font-family="Georgia,serif">HERO</text>
+  <rect x="22" y="66" width="256" height="196" rx="8" fill="url(#hr-art)" stroke="#c9a227" stroke-opacity="0.6"/>
+  <g clip-path="url(#hr-clip)">
+    <g fill="#ffe9a8" opacity="0.3">
+      <path d="M150 140 L142 46 L158 46 Z"/>
+      <path d="M150 140 L142 46 L158 46 Z" transform="rotate(45 150 140)"/>
+      <path d="M150 140 L142 46 L158 46 Z" transform="rotate(90 150 140)"/>
+      <path d="M150 140 L142 46 L158 46 Z" transform="rotate(135 150 140)"/>
+      <path d="M150 140 L142 46 L158 46 Z" transform="rotate(180 150 140)"/>
+      <path d="M150 140 L142 46 L158 46 Z" transform="rotate(225 150 140)"/>
+      <path d="M150 140 L142 46 L158 46 Z" transform="rotate(270 150 140)"/>
+      <path d="M150 140 L142 46 L158 46 Z" transform="rotate(315 150 140)"/>
+    </g>
+    <ellipse cx="150" cy="244" rx="72" ry="12" fill="#2c1e08" opacity="0.7"/>
+    <path d="M138 170 C112 186 104 220 112 246 C126 236 133 210 140 194 Z" fill="#8a1f1f"/>
+    <path d="M136 248 L139 196 C130 190 128 176 133 166 L150 158 L167 166 C172 176 170 190 162 196 L165 248 Z" fill="#2a2118"/>
+    <line x1="163" y1="170" x2="193" y2="114" stroke="#2a2118" stroke-width="9" stroke-linecap="round"/>
+    <line x1="193" y1="110" x2="203" y2="52" stroke="#e8eef5" stroke-width="5.5" stroke-linecap="round"/>
+    <line x1="184" y1="108" x2="204" y2="104" stroke="#c9a227" stroke-width="4.5" stroke-linecap="round"/>
+    <path d="M203 48 L209 42 L207 52 Z" fill="#ffffff" opacity="0.9"/>
+    <circle cx="150" cy="145" r="12" fill="#2a2118"/>
+    <path d="M150 133 C158 126 166 126 170 132 C164 132 158 134 154 138 Z" fill="#8a1f1f"/>
+    <path d="M128 250 L172 250 L170 258 L130 258 Z" fill="#1c1610"/>
+  </g>
+  <circle cx="251" cy="93" r="17" fill="url(#hr-gem)" stroke="#c9a227" stroke-width="2.5"/>
+  <text x="251" y="100" text-anchor="middle" font-size="19" font-weight="bold" fill="#ffffff" font-family="Georgia,serif">2</text>
+  <rect x="22" y="272" width="256" height="22" rx="4" fill="#c9a227" fill-opacity="0.14"/>
+  <text x="150" y="287" text-anchor="middle" font-size="11" letter-spacing="2" fill="#d8b95a">ストライカー ─ エネルギー 2</text>
+  <text x="150" y="318" text-anchor="middle" font-size="14" font-weight="bold" fill="#f5efdd">戦場から離れた時、</text>
+  <text x="150" y="340" text-anchor="middle" font-size="14" font-weight="bold" fill="#f5efdd">護衛を1人増やす</text>
+  <line x1="60" y1="360" x2="240" y2="360" stroke="#c9a227" stroke-opacity="0.4"/>
+  <text x="150" y="386" text-anchor="middle" font-size="11" fill="#a88d5a">「その剣は民の希望のために」</text>
+</svg>
+<figcaption>英雄 ─ HERO ×2（エネルギー2）</figcaption></figure>
+<figure>
+<svg viewBox="0 0 300 420" xmlns="http://www.w3.org/2000/svg" font-family="'Hiragino Mincho ProN','Yu Mincho','Noto Serif JP',serif">
+  <defs>
+    <linearGradient id="sp-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1c2b4a"/><stop offset="1" stop-color="#0a0f1e"/>
+    </linearGradient>
+    <radialGradient id="sp-art" cx="0.5" cy="0.4" r="0.9">
+      <stop offset="0" stop-color="#243a5e"/><stop offset="0.65" stop-color="#121e38"/><stop offset="1" stop-color="#060a16"/>
+    </radialGradient>
+    <radialGradient id="sp-gem" cx="0.35" cy="0.3" r="0.9">
+      <stop offset="0" stop-color="#9fe0ff"/><stop offset="1" stop-color="#1e5f9a"/>
+    </radialGradient>
+    <clipPath id="sp-clip"><rect x="22" y="66" width="256" height="196" rx="8"/></clipPath>
+  </defs>
+  <rect x="4" y="4" width="292" height="412" rx="16" fill="url(#sp-bg)" stroke="#c9a227" stroke-width="3"/>
+  <rect x="11" y="11" width="278" height="398" rx="11" fill="none" stroke="#c9a227" stroke-opacity="0.4"/>
+  <text x="150" y="42" text-anchor="middle" font-size="24" font-weight="bold" fill="#f5e9c8">精 霊</text>
+  <text x="150" y="59" text-anchor="middle" font-size="10" letter-spacing="4" fill="#d8b95a" font-family="Georgia,serif">SPIRIT</text>
+  <rect x="22" y="66" width="256" height="196" rx="8" fill="url(#sp-art)" stroke="#c9a227" stroke-opacity="0.6"/>
+  <g clip-path="url(#sp-clip)">
+    <circle cx="226" cy="104" r="22" fill="#e8edf5" opacity="0.9"/>
+    <circle cx="219" cy="98" r="5" fill="#c2ccd8" opacity="0.5"/>
+    <circle cx="232" cy="110" r="3.5" fill="#c2ccd8" opacity="0.5"/>
+    <circle cx="60" cy="92" r="1.6" fill="#ffffff" opacity="0.8"/>
+    <circle cx="92" cy="76" r="1.2" fill="#ffffff" opacity="0.6"/>
+    <circle cx="256" cy="152" r="1.4" fill="#ffffff" opacity="0.7"/>
+    <circle cx="46" cy="150" r="1.3" fill="#ffffff" opacity="0.6"/>
+    <circle cx="188" cy="80" r="1.2" fill="#ffffff" opacity="0.5"/>
+    <path d="M150 100 C185 125 180 175 162 200 C172 215 168 228 155 233 C150 226 148 226 142 234 C126 228 120 210 133 197 C112 172 115 125 150 100 Z" fill="#bfe8ff" opacity="0.3"/>
+    <path d="M150 118 C172 135 170 172 158 192 C150 205 140 205 135 192 C122 170 128 135 150 118 Z" fill="#dff4ff" opacity="0.55"/>
+    <ellipse cx="150" cy="163" rx="16" ry="26" fill="#ffffff" opacity="0.9"/>
+    <ellipse cx="144" cy="156" rx="3.4" ry="5" fill="#1c2b4a"/>
+    <ellipse cx="156" cy="156" rx="3.4" ry="5" fill="#1c2b4a"/>
+    <path d="M120 214 C104 222 96 236 98 250" fill="none" stroke="#bfe8ff" stroke-width="3" stroke-linecap="round" opacity="0.5"/>
+    <path d="M180 210 C196 220 202 234 200 248" fill="none" stroke="#bfe8ff" stroke-width="3" stroke-linecap="round" opacity="0.5"/>
+    <path d="M150 236 C148 244 150 252 154 258" fill="none" stroke="#bfe8ff" stroke-width="2.5" stroke-linecap="round" opacity="0.4"/>
+    <circle cx="102" cy="130" r="4" fill="#bfe8ff" opacity="0.7"/>
+    <circle cx="198" cy="140" r="3" fill="#bfe8ff" opacity="0.6"/>
+    <circle cx="112" cy="182" r="2.5" fill="#bfe8ff" opacity="0.55"/>
+    <circle cx="192" cy="182" r="2" fill="#bfe8ff" opacity="0.5"/>
+  </g>
+  <circle cx="251" cy="93" r="17" fill="url(#sp-gem)" stroke="#c9a227" stroke-width="2.5"/>
+  <text x="251" y="100" text-anchor="middle" font-size="19" font-weight="bold" fill="#ffffff" font-family="Georgia,serif">1</text>
+  <rect x="22" y="272" width="256" height="22" rx="4" fill="#c9a227" fill-opacity="0.14"/>
+  <text x="150" y="287" text-anchor="middle" font-size="11" letter-spacing="2" fill="#d8b95a">ストライカー ─ エネルギー 1</text>
+  <text x="150" y="328" text-anchor="middle" font-size="15" font-weight="bold" fill="#f5efdd">呪詛の対象にならない</text>
+  <line x1="60" y1="358" x2="240" y2="358" stroke="#c9a227" stroke-opacity="0.4"/>
+  <text x="150" y="384" text-anchor="middle" font-size="11" fill="#8fa0b5">「触れられぬ者に、呪いは届かない」</text>
+</svg>
+<figcaption>精霊 ─ SPIRIT ×2（エネルギー1）</figcaption></figure>
+<figure>
+<svg viewBox="0 0 300 420" xmlns="http://www.w3.org/2000/svg" font-family="'Hiragino Mincho ProN','Yu Mincho','Noto Serif JP',serif">
+  <defs>
+    <linearGradient id="mo-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#4a1414"/><stop offset="1" stop-color="#170404"/>
+    </linearGradient>
+    <radialGradient id="mo-art" cx="0.5" cy="0.42" r="0.85">
+      <stop offset="0" stop-color="#5a1616"/><stop offset="0.65" stop-color="#2e0a0a"/><stop offset="1" stop-color="#170404"/>
+    </radialGradient>
+    <radialGradient id="mo-gem" cx="0.35" cy="0.3" r="0.9">
+      <stop offset="0" stop-color="#9fe0ff"/><stop offset="1" stop-color="#1e5f9a"/>
+    </radialGradient>
+    <clipPath id="mo-clip"><rect x="22" y="66" width="256" height="196" rx="8"/></clipPath>
+  </defs>
+  <rect x="4" y="4" width="292" height="412" rx="16" fill="url(#mo-bg)" stroke="#c9a227" stroke-width="3"/>
+  <rect x="11" y="11" width="278" height="398" rx="11" fill="none" stroke="#c9a227" stroke-opacity="0.4"/>
+  <text x="150" y="42" text-anchor="middle" font-size="24" font-weight="bold" fill="#f5e9c8">怪 物</text>
+  <text x="150" y="59" text-anchor="middle" font-size="10" letter-spacing="4" fill="#d8b95a" font-family="Georgia,serif">MONSTER</text>
+  <rect x="22" y="66" width="256" height="196" rx="8" fill="url(#mo-art)" stroke="#c9a227" stroke-opacity="0.6"/>
+  <g clip-path="url(#mo-clip)">
+    <path d="M50 240 C60 218 52 200 62 184" fill="none" stroke="#1c0606" stroke-width="7" stroke-linecap="round" opacity="0.8"/>
+    <path d="M250 244 C240 222 248 202 238 186" fill="none" stroke="#1c0606" stroke-width="7" stroke-linecap="round" opacity="0.8"/>
+    <path d="M108 118 C90 96 88 76 98 60 C104 82 112 96 124 106 Z" fill="#d8c8a8" stroke="#a89468" stroke-width="1.5"/>
+    <path d="M192 118 C210 96 212 76 202 60 C196 82 188 96 176 106 Z" fill="#d8c8a8" stroke="#a89468" stroke-width="1.5"/>
+    <path d="M150 98 C200 103 220 145 211 186 C205 216 181 234 150 234 C119 234 95 216 89 186 C80 145 100 103 150 98 Z" fill="#3a1010" stroke="#200808" stroke-width="3"/>
+    <circle cx="130" cy="150" r="11" fill="#ff8c2e" opacity="0.35"/>
+    <circle cx="170" cy="150" r="11" fill="#ff8c2e" opacity="0.35"/>
+    <path d="M116 152 L145 143 L141 160 Z" fill="#ffb02e"/>
+    <path d="M184 152 L155 143 L159 160 Z" fill="#ffb02e"/>
+    <path d="M144 172 L148 179 M156 172 L152 179" stroke="#200808" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M110 190 C130 206 170 206 190 190 C182 224 118 224 110 190 Z" fill="#1a0505"/>
+    <path d="M118 193 L124 208 L129 194 Z" fill="#f0e8d8"/>
+    <path d="M136 197 L141 212 L146 198 Z" fill="#f0e8d8"/>
+    <path d="M154 198 L159 212 L164 197 Z" fill="#f0e8d8"/>
+    <path d="M171 194 L176 208 L182 193 Z" fill="#f0e8d8"/>
+    <path d="M131 214 L135 205 L139 214 Z" fill="#e0d4bc"/>
+    <path d="M161 214 L165 205 L169 214 Z" fill="#e0d4bc"/>
+    <path d="M52 246 C58 236 62 236 64 244 M64 248 C70 236 74 236 76 246 M76 250 C82 240 86 240 88 248" stroke="#d8c8a8" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <path d="M212 248 C218 238 222 238 224 246 M224 250 C230 238 234 238 236 248" stroke="#d8c8a8" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <ellipse cx="150" cy="250" rx="96" ry="13" fill="#170404" opacity="0.9"/>
+  </g>
+  <circle cx="251" cy="93" r="17" fill="url(#mo-gem)" stroke="#c9a227" stroke-width="2.5"/>
+  <text x="251" y="100" text-anchor="middle" font-size="19" font-weight="bold" fill="#ffffff" font-family="Georgia,serif">3</text>
+  <rect x="22" y="272" width="256" height="22" rx="4" fill="#c9a227" fill-opacity="0.14"/>
+  <text x="150" y="287" text-anchor="middle" font-size="11" letter-spacing="2" fill="#d8b95a">ストライカー ─ エネルギー 3</text>
+  <text x="150" y="318" text-anchor="middle" font-size="14" font-weight="bold" fill="#f5efdd">毎ターン開始時に自国の</text>
+  <text x="150" y="340" text-anchor="middle" font-size="14" font-weight="bold" fill="#f5efdd">護衛を1体生贄に捧げる</text>
+  <line x1="60" y1="360" x2="240" y2="360" stroke="#c9a227" stroke-opacity="0.4"/>
+  <text x="150" y="386" text-anchor="middle" font-size="11" fill="#b88d7a">「力の代償は、味方の血」</text>
+</svg>
+<figcaption>怪物 ─ MONSTER ×2（エネルギー3）</figcaption></figure>
+</div></section>
+</div>
