@@ -239,7 +239,10 @@ body{
 /* スマホ横持ちはCSS幅が900pxを超える機種が多い（例: 932px）。
    幅が狭い or 高さが低い（＝横持ちスマホ）を「モバイル」とみなす */
 @media (max-width:900px), (max-height:560px){
-  .my-hand{ display:none; }
+  /* 手札は常に画面下部に表示（コマンドには含めない） */
+  .my-hand{ display:flex; bottom:calc(2px + env(safe-area-inset-bottom, 0px)); z-index:35; }
+  .my-hand .hc{ width:104px; height:146px; margin:0 -8px; }
+  .my-hand .hc.sel .hcInner{ transform:translateY(-26px) scale(1.12); }
   .hint{ display:none; }
   .brand{ display:none; }               /* プレイ中は装飾ロゴを隠して上部を空ける */
   .hud{ justify-content:flex-end; }     /* 音声・視点操作は右上に固定 */
@@ -449,7 +452,7 @@ var STRIKERS = {
 var SPELLS = { curse:'呪詛', cyclone:'竜巻', heal:'治癒', cancel:'取消', growth:'成長', aging:'老化' };
 var MAX_GUARDS = 10;
 var uidSeq = 0;
-var WG_VERSION = '2026.07.09d';
+var WG_VERSION = '2026.07.09e';
 
 var S = null;      // ゲーム状態
 var UI = { sel:-1, summon:false, busy:false };
@@ -1809,10 +1812,7 @@ function renderPlaque(){
       var c = document.createElement('button'); c.className='btn'; c.textContent='ストライカーを出す';
       c.disabled = !S.players[MY].waiting.length || S.players[MY].field.length>=3;
       c.onclick = openStrikerPicker;
-      var hb = document.createElement('button'); hb.className='btn'; hb.textContent='手札';
-      hb.disabled = !S.players[MY].hand.length;
-      hb.onclick = openHandPicker;
-      bar.appendChild(d); bar.appendChild(c); bar.appendChild(hb);
+      bar.appendChild(d); bar.appendChild(c);
     } else {
       active = true;
       if(UI.sel>=0){
@@ -1823,15 +1823,12 @@ function renderPlaque(){
       } else {
         sub.textContent = 'スペルを唱えるか、ターンを終了';
       }
-      var hb2 = document.createElement('button'); hb2.className='btn'; hb2.textContent='手札を見る';
-      hb2.disabled = !S.players[MY].hand.length;
-      hb2.onclick = openHandPicker;
       var attackers = S.players[MY].field.filter(function(s){ return s.enteredTurn < S.turnCount; });
       var total = attackers.reduce(function(sum,s){ return sum+s.energy; },0);
       var e = document.createElement('button'); e.className='btn';
       e.textContent = attackers.length ? ('アタック(' + total + ') ＆ 終了') : 'ターン終了';
       e.onclick = onEndTurn;
-      bar.appendChild(hb2); bar.appendChild(e);
+      bar.appendChild(e);
     }
   }
   el.appendChild(title); el.appendChild(sub);
