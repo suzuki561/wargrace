@@ -203,6 +203,28 @@ body{
   background:#0d0a1e; color:#c9bdf0; border:1px solid rgba(155,138,224,.4); border-radius:8px;
   padding:6px 8px; resize:none; }
 
+#picker{ position:fixed; inset:0; z-index:48; display:flex; flex-direction:column;
+  background:rgba(8,5,18,.94); backdrop-filter:blur(3px);
+  padding:calc(12px + env(safe-area-inset-top, 0px)) calc(16px + env(safe-area-inset-right, 0px))
+          calc(14px + env(safe-area-inset-bottom, 0px)) calc(16px + env(safe-area-inset-left, 0px)); }
+#picker.hidden{ display:none; }
+#picker h3{ margin:4px 0 8px; text-align:center; font-size:19px; letter-spacing:.25em;
+  color:#f0e2ae; font-weight:600; }
+#picker .cards{ flex:1; display:flex; gap:16px; overflow-x:auto; align-items:center;
+  padding:8px 4px 30px; -webkit-overflow-scrolling:touch; }
+#picker .cards > :first-child{ margin-left:auto; }
+#picker .cards > :last-child{ margin-right:auto; }
+#picker .pcard{ flex:0 0 auto; position:relative; cursor:pointer; transition:transform .15s ease;
+  width:min(46vw, 250px, calc((100vh - 230px) * .714)); aspect-ratio:300/420; border-radius:12px; }
+#picker .pcard svg{ width:100%; height:100%; display:block; border-radius:12px;
+  box-shadow:0 10px 26px rgba(0,0,0,.6); }
+#picker .pcard.sel{ transform:scale(1.06);
+  box-shadow:0 0 0 3px var(--gold), 0 0 26px rgba(232,195,74,.8); }
+#picker .pcard.inert{ filter:grayscale(.6) brightness(.7); cursor:default; }
+#picker .pcard .plabel{ position:absolute; left:-10%; right:-10%; bottom:-26px; text-align:center;
+  font-size:12px; letter-spacing:.08em; color:var(--violet); white-space:nowrap; }
+#picker .pbtns{ display:flex; gap:12px; margin-top:6px; }
+#picker .pbtns .btn{ flex:1; min-height:56px; font-size:17px; border-radius:12px; }
 .hint{ position:fixed; bottom:calc(12px + env(safe-area-inset-bottom, 0px));
   left:calc(18px + env(safe-area-inset-left, 0px)); z-index:30; font-size:11px; letter-spacing:.12em;
   color:rgba(156,146,189,.85); }
@@ -948,6 +970,7 @@ body{
 <div class="hand my-hand" id="myHand"></div>
 <aside id="log" aria-live="polite"></aside>
 <div id="fx" aria-hidden="true"></div>
+<div id="picker" class="hidden"></div>
 <div class="overlay" id="overlay"><div class="panel" id="overlayPanel"></div></div>
 <div class="hint">手札クリックで選択 → もう一度クリック（または対象を選択）で詠唱</div>
 <div id="rotateHint" aria-hidden="true">
@@ -2177,6 +2200,7 @@ async function startTurn(p){
   if(S.over) return;
   S.turn = p; S.turnCount++;
   UI.sel = -1; UI.summon = false;
+  closePicker();
   var who = nameOf(p);
   sfx('turn');
   log('── ' + who + 'のターン ──');
@@ -2301,7 +2325,7 @@ function renderHands(){
     var myTurn = S.turn===MY && !S.over && !UI.busy;
     if(sp==='cancel') hc.classList.add('inert');
     if(!myTurn) hc.classList.add('locked');
-    hc.onclick = function(){ onHandClick(i); };
+    hc.onclick = function(){ onHandTap(i); };
     mh.appendChild(hc);
   });
 }
@@ -2329,7 +2353,7 @@ function renderPlaque(){
       d.onclick = onDraw;
       var c = document.createElement('button'); c.className='btn'; c.textContent='ストライカーを出す';
       c.disabled = !S.players[MY].waiting.length || S.players[MY].field.length>=3;
-      c.onclick = function(){ UI.summon=true; UI.sel=-1; render(); };
+      c.onclick = openStrikerPicker;
       btns.appendChild(d); btns.appendChild(c);
     } else {
       if(UI.sel>=0){
@@ -2395,6 +2419,91 @@ function applyTargetHighlights(){
       });
     });
   }
+}
+
+/* ============================== 全画面ピッカー（スマホ最適化） ============================== */
+function closePicker(){
+  var pk = $('picker');
+  pk.classList.add('hidden'); pk.innerHTML = '';
+  UI.picker = null; UI.pickSel = -1;
+}
+function pcardEl(sym, labelText){
+  var pc = document.createElement('div'); pc.className = 'pcard';
+  pc.innerHTML = '<svg viewBox="0 0 300 420"><use href="#card-' + sym + '"/></svg>';
+  if(labelText){
+    var lab = document.createElement('div'); lab.className = 'plabel';
+    lab.textContent = labelText;
+    pc.appendChild(lab);
+  }
+  return pc;
+}
+function openStrikerPicker(){
+  if(S.turn!==MY || S.castsLeft<=0 || UI.busy || S.over) return;
+  UI.picker = 'summon'; UI.sel = -1;
+  var pk = $('picker'); pk.innerHTML = ''; pk.classList.remove('hidden');
+  var h = document.createElement('h3'); h.textContent = 'ストライカーを戦場に送る';
+  var cards = document.createElement('div'); cards.className = 'cards';
+  ['hero','spirit','monster'].forEach(function(type){
+    if(S.players[MY].waiting.indexOf(type) < 0) return;
+    var pc = pcardEl(type, '');
+    pc.onclick = function(){ closePicker(); onSummonPick(type); };
+    cards.appendChild(pc);
+  });
+  var btns = document.createElement('div'); btns.className = 'pbtns';
+  var cancel = document.createElement('button'); cancel.className = 'btn warn'; cancel.textContent = 'やめる';
+  cancel.onclick = closePicker;
+  btns.appendChild(cancel);
+  pk.appendChild(h); pk.appendChild(cards); pk.appendChild(btns);
+}
+function openHandPicker(){
+  if(S.turn!==MY || UI.busy || S.over) return;
+  if(!S.players[MY].hand.length){ log('手札がない'); return; }
+  UI.picker = 'hand'; UI.pickSel = -1;
+  renderHandPicker();
+}
+function renderHandPicker(){
+  var pk = $('picker'); pk.innerHTML = ''; pk.classList.remove('hidden');
+  var hand = S.players[MY].hand;
+  var h = document.createElement('h3');
+  h.textContent = S.castsLeft > 0 ? '手札 ── ドローかカードを選ぶ' : '手札 ── 唱えるカードを選ぶ';
+  var cards = document.createElement('div'); cards.className = 'cards';
+  hand.forEach(function(sp, i){
+    var reactOnly = (sp === 'cancel');
+    var noTgt = needsTarget(sp) && !legalTargets(MY, sp).length;
+    var label = reactOnly ? '対応時に使用' : (noTgt ? '対象がいない' : '');
+    var pc = pcardEl(sp, label);
+    if(reactOnly || noTgt) pc.classList.add('inert');
+    if(UI.pickSel === i) pc.classList.add('sel');
+    if(!reactOnly && !noTgt) pc.onclick = function(){ UI.pickSel = i; renderHandPicker(); };
+    cards.appendChild(pc);
+  });
+  var btns = document.createElement('div'); btns.className = 'pbtns';
+  if(UI.pickSel >= 0){
+    var sp = hand[UI.pickSel];
+    var cast = document.createElement('button'); cast.className = 'btn';
+    if(needsTarget(sp)){
+      cast.textContent = '対象を選ぶ →';
+      cast.onclick = function(){ var idx = UI.pickSel; closePicker(); UI.sel = idx; render(); };
+    } else {
+      cast.textContent = '「' + SPELLS[sp] + '」を唱える';
+      cast.onclick = function(){ var idx = UI.pickSel; closePicker(); doCast(idx, null); };
+    }
+    btns.appendChild(cast);
+  }
+  if(S.castsLeft > 0){
+    var dr = document.createElement('button'); dr.className = 'btn'; dr.textContent = 'カードを引く';
+    dr.onclick = function(){ closePicker(); onDraw(); };
+    btns.appendChild(dr);
+  }
+  var cancel = document.createElement('button'); cancel.className = 'btn warn'; cancel.textContent = '閉じる';
+  cancel.onclick = closePicker;
+  btns.appendChild(cancel);
+  pk.appendChild(h); pk.appendChild(cards); pk.appendChild(btns);
+}
+function onHandTap(i){
+  if(S.turn!==MY || UI.busy || S.over) return;
+  if(UI.sel >= 0){ UI.sel = -1; render(); return; }   // 対象選択中なら解除
+  openHandPicker();
 }
 
 /* ============================== 入力ハンドラ ============================== */
