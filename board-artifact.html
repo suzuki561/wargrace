@@ -236,7 +236,9 @@ body{
   #rotateHint{ display:grid; }
 }
 /* 狭い画面: 手札の扇は隠しピッカーに任せる（ボタンと重ならないように） */
-@media (max-width:900px){
+/* スマホ横持ちはCSS幅が900pxを超える機種が多い（例: 932px）。
+   幅が狭い or 高さが低い（＝横持ちスマホ）を「モバイル」とみなす */
+@media (max-width:900px), (max-height:560px){
   .my-hand{ display:none; }
   .hint{ display:none; }
   .brand{ display:none; }               /* プレイ中は装飾ロゴを隠して上部を空ける */
@@ -1009,7 +1011,7 @@ var STRIKERS = {
 var SPELLS = { curse:'呪詛', cyclone:'竜巻', heal:'治癒', cancel:'取消', growth:'成長', aging:'老化' };
 var MAX_GUARDS = 10;
 var uidSeq = 0;
-var WG_VERSION = '2026.07.09c';
+var WG_VERSION = '2026.07.09d';
 
 var S = null;      // ゲーム状態
 var UI = { sel:-1, summon:false, busy:false };
@@ -2398,7 +2400,7 @@ function renderPlaque(){
   // 選択時（自分の操作待ち）だけボタンを出す。非選択時は盤面をアップ。
   bar.classList.toggle('hidden', !active);
   // モバイルはピンチで自由に拡大できるので自動ズームなし。デスクトップのみ非選択時に少しアップ。
-  var narrow = window.innerWidth <= 900;
+  var narrow = window.innerWidth <= 900 || window.innerHeight <= 560;
   document.documentElement.style.setProperty('--zoom', (active || narrow) ? '1' : '1.16');
 }
 function render(){
@@ -2845,7 +2847,7 @@ function showJoin(){
 /* ============================== 画面調整 ============================== */
 var root = document.documentElement;
 function fit(){
-  var narrow = window.innerWidth <= 900;
+  var narrow = window.innerWidth <= 900 || window.innerHeight <= 560;
   var s;
   if(narrow){
     // 手札の扇は隠れているので縦の余白を切り詰め、傾き投影ぶん大きく表示（カードを拡大）
