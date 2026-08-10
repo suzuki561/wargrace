@@ -1,48 +1,87 @@
 <svg viewBox="0 0 300 420" xmlns="http://www.w3.org/2000/svg" font-family="'Hiragino Mincho ProN','Yu Mincho','Noto Serif JP',serif">
   <defs>
-    <linearGradient id="sp-bg" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#1c2b4a"/><stop offset="1" stop-color="#0a0f1e"/>
+    <linearGradient id="sp-gold" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f4e4a8"/><stop offset=".45" stop-color="#d4af37"/><stop offset="1" stop-color="#7a5f1e"/>
     </linearGradient>
-    <radialGradient id="sp-art" cx="0.5" cy="0.4" r="0.9">
-      <stop offset="0" stop-color="#243a5e"/><stop offset="0.65" stop-color="#121e38"/><stop offset="1" stop-color="#060a16"/>
+    <linearGradient id="sp-frame" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#6a5a30"/><stop offset=".5" stop-color="#c9a860"/><stop offset="1" stop-color="#4a3a1c"/>
+    </linearGradient>
+    <linearGradient id="sp-parch" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ece2c6"/><stop offset="1" stop-color="#cbbc94"/>
+    </linearGradient>
+    <radialGradient id="sp-art" cx=".5" cy=".42" r=".9">
+      <stop offset="0" stop-color="#183c44"/><stop offset=".55" stop-color="#0c2028"/><stop offset="1" stop-color="#030a0e"/>
     </radialGradient>
-    <radialGradient id="sp-gem" cx="0.35" cy="0.3" r="0.9">
-      <stop offset="0" stop-color="#9fe0ff"/><stop offset="1" stop-color="#1e5f9a"/>
+    <radialGradient id="sp-glow" cx=".5" cy=".42" r=".5">
+      <stop offset="0" stop-color="#b8f0ec" stop-opacity=".9"/><stop offset=".5" stop-color="#58c8b8" stop-opacity=".35"/><stop offset="1" stop-color="#58c8b8" stop-opacity="0"/>
     </radialGradient>
-    <clipPath id="sp-clip"><rect x="22" y="66" width="256" height="196" rx="8"/></clipPath>
+    <linearGradient id="sp-body" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#eefcfa"/><stop offset=".6" stop-color="#a8ded6"/><stop offset="1" stop-color="#5a9a90"/>
+    </linearGradient>
+    <linearGradient id="sp-wing" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#d8f8f4" stop-opacity=".9"/><stop offset="1" stop-color="#58c8b8" stop-opacity=".25"/>
+    </linearGradient>
+    <filter id="sp-noise" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency=".55" numOctaves="2" result="n" seed="15"/>
+      <feColorMatrix in="n" type="matrix" values="0 0 0 0 .35 0 0 0 0 .55 0 0 0 0 .52 0 0 0 .14 0"/>
+      <feComposite operator="in" in2="SourceGraphic"/>
+    </filter>
+    <filter id="sp-soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="1.2"/>
+    </filter>
+    <clipPath id="sp-clip"><rect x="24" y="70" width="252" height="188" rx="6"/></clipPath>
   </defs>
-  <rect x="4" y="4" width="292" height="412" rx="16" fill="url(#sp-bg)" stroke="#c9a227" stroke-width="3"/>
-  <rect x="11" y="11" width="278" height="398" rx="11" fill="none" stroke="#c9a227" stroke-opacity="0.4"/>
-  <text x="150" y="42" text-anchor="middle" font-size="24" font-weight="bold" fill="#f5e9c8">精 霊</text>
-  <text x="150" y="59" text-anchor="middle" font-size="10" letter-spacing="4" fill="#d8b95a" font-family="Georgia,serif">SPIRIT</text>
-  <rect x="22" y="66" width="256" height="196" rx="8" fill="url(#sp-art)" stroke="#c9a227" stroke-opacity="0.6"/>
-  <g clip-path="url(#sp-clip)">
-    <circle cx="226" cy="104" r="22" fill="#e8edf5" opacity="0.9"/>
-    <circle cx="219" cy="98" r="5" fill="#c2ccd8" opacity="0.5"/>
-    <circle cx="232" cy="110" r="3.5" fill="#c2ccd8" opacity="0.5"/>
-    <circle cx="60" cy="92" r="1.6" fill="#ffffff" opacity="0.8"/>
-    <circle cx="92" cy="76" r="1.2" fill="#ffffff" opacity="0.6"/>
-    <circle cx="256" cy="152" r="1.4" fill="#ffffff" opacity="0.7"/>
-    <circle cx="46" cy="150" r="1.3" fill="#ffffff" opacity="0.6"/>
-    <circle cx="188" cy="80" r="1.2" fill="#ffffff" opacity="0.5"/>
-    <path d="M150 100 C185 125 180 175 162 200 C172 215 168 228 155 233 C150 226 148 226 142 234 C126 228 120 210 133 197 C112 172 115 125 150 100 Z" fill="#bfe8ff" opacity="0.3"/>
-    <path d="M150 118 C172 135 170 172 158 192 C150 205 140 205 135 192 C122 170 128 135 150 118 Z" fill="#dff4ff" opacity="0.55"/>
-    <ellipse cx="150" cy="163" rx="16" ry="26" fill="#ffffff" opacity="0.9"/>
-    <ellipse cx="144" cy="156" rx="3.4" ry="5" fill="#1c2b4a"/>
-    <ellipse cx="156" cy="156" rx="3.4" ry="5" fill="#1c2b4a"/>
-    <path d="M120 214 C104 222 96 236 98 250" fill="none" stroke="#bfe8ff" stroke-width="3" stroke-linecap="round" opacity="0.5"/>
-    <path d="M180 210 C196 220 202 234 200 248" fill="none" stroke="#bfe8ff" stroke-width="3" stroke-linecap="round" opacity="0.5"/>
-    <path d="M150 236 C148 244 150 252 154 258" fill="none" stroke="#bfe8ff" stroke-width="2.5" stroke-linecap="round" opacity="0.4"/>
-    <circle cx="102" cy="130" r="4" fill="#bfe8ff" opacity="0.7"/>
-    <circle cx="198" cy="140" r="3" fill="#bfe8ff" opacity="0.6"/>
-    <circle cx="112" cy="182" r="2.5" fill="#bfe8ff" opacity="0.55"/>
-    <circle cx="192" cy="182" r="2" fill="#bfe8ff" opacity="0.5"/>
+
+  <rect x="3" y="3" width="294" height="414" rx="14" fill="#0a0810"/>
+  <rect x="3" y="3" width="294" height="414" rx="14" filter="url(#sp-noise)"/>
+  <rect x="7.5" y="7.5" width="285" height="405" rx="11" fill="none" stroke="url(#sp-frame)" stroke-width="3"/>
+  <rect x="13" y="13" width="274" height="394" rx="8" fill="none" stroke="#c9a227" stroke-opacity=".4"/>
+  <g stroke="url(#sp-gold)" stroke-width="2" fill="none">
+    <path d="M13 34 Q13 13 34 13"/><path d="M266 13 Q287 13 287 34"/>
+    <path d="M287 386 Q287 407 266 407"/><path d="M34 407 Q13 407 13 386"/>
   </g>
-  <circle cx="251" cy="93" r="17" fill="url(#sp-gem)" stroke="#c9a227" stroke-width="2.5"/>
-  <text x="251" y="100" text-anchor="middle" font-size="19" font-weight="bold" fill="#ffffff" font-family="Georgia,serif">1</text>
-  <rect x="22" y="272" width="256" height="22" rx="4" fill="#c9a227" fill-opacity="0.14"/>
-  <text x="150" y="287" text-anchor="middle" font-size="11" letter-spacing="2" fill="#d8b95a">ストライカー ─ エネルギー 1</text>
-  <text x="150" y="328" text-anchor="middle" font-size="15" font-weight="bold" fill="#f5efdd">呪詛の対象にならない</text>
-  <line x1="60" y1="358" x2="240" y2="358" stroke="#c9a227" stroke-opacity="0.4"/>
-  <text x="150" y="384" text-anchor="middle" font-size="11" fill="#8fa0b5">「触れられぬ者に、呪いは届かない」</text>
+  <g fill="#d4af37"><circle cx="21" cy="21" r="2.2"/><circle cx="279" cy="21" r="2.2"/><circle cx="279" cy="399" r="2.2"/><circle cx="21" cy="399" r="2.2"/></g>
+
+  <circle cx="38" cy="40" r="17" fill="#0c2028" stroke="url(#sp-gold)" stroke-width="2.5"/>
+  <text x="38" y="49" text-anchor="middle" font-size="26" font-weight="bold" fill="#8ae8d8" font-family="Georgia,serif">1</text>
+
+  <text x="163" y="40" text-anchor="middle" font-size="25" fill="#efe6cf" font-family="Georgia,'Times New Roman',serif" letter-spacing="2">spirit</text>
+  <text x="163" y="59" text-anchor="middle" font-size="13" letter-spacing="6" fill="#c9b87a">精霊</text>
+
+  <rect x="24" y="70" width="252" height="188" rx="6" fill="url(#sp-art)"/>
+  <g clip-path="url(#sp-clip)">
+    <ellipse cx="150" cy="150" rx="120" ry="95" fill="url(#sp-glow)"/>
+    <g filter="url(#sp-soft)" opacity=".85">
+      <path d="M138 150 C110 128 84 128 66 146 C86 150 96 158 102 170 C80 172 66 184 60 200 C84 194 104 196 120 208 Z" fill="url(#sp-wing)"/>
+      <path d="M162 150 C190 128 216 128 234 146 C214 150 204 158 198 170 C220 172 234 184 240 200 C216 194 196 196 180 208 Z" fill="url(#sp-wing)" />
+    </g>
+    <path d="M150 122 C136 138 130 168 134 210 C140 226 144 236 150 244 C156 236 160 226 166 210 C170 168 164 138 150 122 Z" fill="url(#sp-body)"/>
+    <circle cx="150" cy="118" r="17" fill="url(#sp-body)"/>
+    <path d="M136 112 C136 100 144 92 152 92 C162 96 166 106 162 116 C158 108 152 106 148 108 C144 106 138 108 136 112 Z" fill="#d0f4ee" opacity=".9"/>
+    <path d="M144.5 118 a1.9 2.6 0 1 0 .1 0 M155.5 118 a1.9 2.6 0 1 0 .1 0" fill="#123c40"/>
+    <path d="M132 156 C120 164 114 176 116 190" stroke="#d8f8f4" stroke-width="3" fill="none" stroke-linecap="round" opacity=".8"/>
+    <path d="M168 156 C180 164 186 176 184 190" stroke="#d8f8f4" stroke-width="3" fill="none" stroke-linecap="round" opacity=".8"/>
+    <circle cx="116" cy="194" r="5" fill="#eefcfa"><animate attributeName="r" values="5;6.2;5" dur="3s" repeatCount="indefinite"/></circle>
+    <g fill="#d8f8f4">
+      <circle cx="92" cy="110" r="1.8" opacity=".85"><animate attributeName="cy" values="110;96;110" dur="4.2s" repeatCount="indefinite"/></circle>
+      <circle cx="212" cy="102" r="1.5" opacity=".75"><animate attributeName="cy" values="102;88;102" dur="5.2s" repeatCount="indefinite"/></circle>
+      <circle cx="72" cy="170" r="1.4" opacity=".6"/><circle cx="230" cy="164" r="1.7" opacity=".7"/>
+      <circle cx="122" cy="88" r="1.3" opacity=".7"/><circle cx="186" cy="82" r="1.2" opacity=".65"/>
+      <circle cx="102" cy="228" r="1.5" opacity=".55"/><circle cx="204" cy="222" r="1.4" opacity=".6"/>
+    </g>
+    <g stroke="#8ae8d8" stroke-width="1.2" fill="none" opacity=".55" stroke-linecap="round">
+      <path d="M150 244 q-18 6 -40 2"/><path d="M150 244 q18 6 40 2"/>
+    </g>
+    <ellipse cx="150" cy="254" rx="120" ry="15" fill="#010608" opacity=".9"/>
+  </g>
+  <rect x="24" y="70" width="252" height="188" rx="6" fill="none" stroke="url(#sp-frame)" stroke-width="1.5"/>
+
+  <rect x="26" y="286" width="248" height="92" rx="5" fill="url(#sp-parch)" stroke="#4a3a20" stroke-width="1.5"/>
+  <rect x="29" y="289" width="242" height="86" rx="3" fill="none" stroke="#8a744a" stroke-opacity=".5"/>
+  <text x="150" y="305" text-anchor="middle" font-size="10" letter-spacing="3" fill="#7a6640">─ ストライカー ・ エネルギー 1 ─</text>
+  <text x="150" y="334" text-anchor="middle" font-size="15.5" font-weight="bold" fill="#241c10">呪詛の対象にならない</text>
+  <text x="150" y="366" text-anchor="middle" font-size="10.5" fill="#6a5c40">「触れられぬ者に、呪いは届かない」</text>
+
+  <circle cx="150" cy="394" r="13" fill="#0c2028" stroke="url(#sp-gold)" stroke-width="2"/>
+  <path d="M150 386.5 l2.2 5 5.3 .6 -4 3.6 1.1 5.3 -4.6 -2.7 -4.6 2.7 1.1 -5.3 -4 -3.6 5.3 -.6 Z" fill="#8ae8d8"/>
 </svg>

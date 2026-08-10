@@ -3,3 +3,4 @@ node_modules/
 app/ios/
 app/node_modules/
 serve.py
+.claude/

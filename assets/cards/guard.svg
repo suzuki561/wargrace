@@ -1,40 +1,85 @@
 <svg viewBox="0 0 300 420" xmlns="http://www.w3.org/2000/svg" font-family="'Hiragino Mincho ProN','Yu Mincho','Noto Serif JP',serif">
   <defs>
-    <linearGradient id="gu-bg" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#2b3d52"/><stop offset="1" stop-color="#0e1620"/>
+    <linearGradient id="gu-gold" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f4e4a8"/><stop offset=".45" stop-color="#d4af37"/><stop offset="1" stop-color="#7a5f1e"/>
     </linearGradient>
-    <radialGradient id="gu-art" cx="0.5" cy="0.4" r="0.85">
-      <stop offset="0" stop-color="#33475e"/><stop offset="0.65" stop-color="#1c2938"/><stop offset="1" stop-color="#0e1620"/>
+    <linearGradient id="gu-frame" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#6a5a30"/><stop offset=".5" stop-color="#c9a860"/><stop offset="1" stop-color="#4a3a1c"/>
+    </linearGradient>
+    <linearGradient id="gu-parch" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ece2c6"/><stop offset="1" stop-color="#cbbc94"/>
+    </linearGradient>
+    <radialGradient id="gu-art" cx=".5" cy=".4" r=".9">
+      <stop offset="0" stop-color="#2e3844"/><stop offset=".55" stop-color="#181f28"/><stop offset="1" stop-color="#06080c"/>
     </radialGradient>
-    <clipPath id="gu-clip"><rect x="22" y="66" width="256" height="196" rx="8"/></clipPath>
+    <linearGradient id="gu-shield" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#8a9cb0"/><stop offset=".5" stop-color="#54667a"/><stop offset="1" stop-color="#2a3644"/>
+    </linearGradient>
+    <linearGradient id="gu-die" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f6efe0"/><stop offset="1" stop-color="#cfc0a0"/>
+    </linearGradient>
+    <filter id="gu-noise" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency=".55" numOctaves="2" result="n" seed="18"/>
+      <feColorMatrix in="n" type="matrix" values="0 0 0 0 .45 0 0 0 0 .5 0 0 0 0 .58 0 0 0 .15 0"/>
+      <feComposite operator="in" in2="SourceGraphic"/>
+    </filter>
+    <clipPath id="gu-clip"><rect x="24" y="70" width="252" height="188" rx="6"/></clipPath>
   </defs>
-  <rect x="4" y="4" width="292" height="412" rx="16" fill="url(#gu-bg)" stroke="#c9a227" stroke-width="3"/>
-  <rect x="11" y="11" width="278" height="398" rx="11" fill="none" stroke="#c9a227" stroke-opacity="0.4"/>
-  <text x="150" y="42" text-anchor="middle" font-size="24" font-weight="bold" fill="#f5e9c8">護 衛</text>
-  <text x="150" y="59" text-anchor="middle" font-size="10" letter-spacing="4" fill="#d8b95a" font-family="Georgia,serif">GUARD</text>
-  <rect x="22" y="66" width="256" height="196" rx="8" fill="url(#gu-art)" stroke="#c9a227" stroke-opacity="0.6"/>
-  <g clip-path="url(#gu-clip)">
-    <line x1="70" y1="248" x2="128" y2="96" stroke="#8a7248" stroke-width="4"/>
-    <polygon points="128,96 122,84 136,88" fill="#c2d0de"/>
-    <line x1="230" y1="248" x2="172" y2="96" stroke="#8a7248" stroke-width="4"/>
-    <polygon points="172,96 178,84 164,88" fill="#c2d0de"/>
-    <path d="M96 128 C114 128 124 138 124 154 C124 184 108 204 96 216 C84 204 68 184 68 154 C68 138 78 128 96 128 Z" fill="#5a6c82" stroke="#93a6bc" stroke-width="2.5"/>
-    <circle cx="96" cy="160" r="7" fill="#8a7248"/>
-    <path d="M204 128 C222 128 232 138 232 154 C232 184 216 204 204 216 C192 204 176 184 176 154 C176 138 186 128 204 128 Z" fill="#5a6c82" stroke="#93a6bc" stroke-width="2.5"/>
-    <circle cx="204" cy="160" r="7" fill="#8a7248"/>
-    <path d="M150 108 C176 108 190 121 190 143 C190 183 168 210 150 226 C132 210 110 183 110 143 C110 121 124 108 150 108 Z" fill="#7f93ad" stroke="#d6e2ee" stroke-width="3"/>
-    <line x1="150" y1="116" x2="150" y2="218" stroke="#5a6c82" stroke-width="3"/>
-    <line x1="118" y1="150" x2="182" y2="150" stroke="#5a6c82" stroke-width="3"/>
-    <circle cx="150" cy="150" r="12" fill="#c9a227" stroke="#e8c34a" stroke-width="2"/>
-    <circle cx="128" cy="126" r="2" fill="#d6e2ee"/>
-    <circle cx="172" cy="126" r="2" fill="#d6e2ee"/>
-    <circle cx="150" cy="112" r="2" fill="#d6e2ee"/>
-    <ellipse cx="150" cy="246" rx="100" ry="14" fill="#0a111a" opacity="0.85"/>
+
+  <rect x="3" y="3" width="294" height="414" rx="14" fill="#0a0810"/>
+  <rect x="3" y="3" width="294" height="414" rx="14" filter="url(#gu-noise)"/>
+  <rect x="7.5" y="7.5" width="285" height="405" rx="11" fill="none" stroke="url(#gu-frame)" stroke-width="3"/>
+  <rect x="13" y="13" width="274" height="394" rx="8" fill="none" stroke="#c9a227" stroke-opacity=".4"/>
+  <g stroke="url(#gu-gold)" stroke-width="2" fill="none">
+    <path d="M13 34 Q13 13 34 13"/><path d="M266 13 Q287 13 287 34"/>
+    <path d="M287 386 Q287 407 266 407"/><path d="M34 407 Q13 407 13 386"/>
   </g>
-  <rect x="22" y="272" width="256" height="22" rx="4" fill="#c9a227" fill-opacity="0.14"/>
-  <text x="150" y="287" text-anchor="middle" font-size="11" letter-spacing="2" fill="#d8b95a">フィールドカード</text>
-  <text x="150" y="318" text-anchor="middle" font-size="14" font-weight="bold" fill="#f5efdd">カードの上のダイスの数が護衛の人数</text>
-  <text x="150" y="340" text-anchor="middle" font-size="14" font-weight="bold" fill="#f5efdd">初期値10から始まる</text>
-  <line x1="60" y1="360" x2="240" y2="360" stroke="#c9a227" stroke-opacity="0.4"/>
-  <text x="150" y="386" text-anchor="middle" font-size="11" fill="#8fa0b5">「盾の壁は王の眠りを守る」</text>
+  <g fill="#d4af37"><circle cx="21" cy="21" r="2.2"/><circle cx="279" cy="21" r="2.2"/><circle cx="279" cy="399" r="2.2"/><circle cx="21" cy="399" r="2.2"/></g>
+
+  <circle cx="38" cy="40" r="17" fill="#181f28" stroke="url(#gu-gold)" stroke-width="2.5"/>
+  <path d="M38 29 L48 33 V42 C48 48 44 52 38 54 C32 52 28 48 28 42 V33 Z" fill="#8a9cb0"/>
+  <path d="M38 33 V50" stroke="#181f28" stroke-width="1.6"/>
+
+  <text x="163" y="40" text-anchor="middle" font-size="25" fill="#efe6cf" font-family="Georgia,'Times New Roman',serif" letter-spacing="2">guard</text>
+  <text x="163" y="59" text-anchor="middle" font-size="13" letter-spacing="6" fill="#c9b87a">護衛</text>
+
+  <rect x="24" y="70" width="252" height="188" rx="6" fill="url(#gu-art)"/>
+  <g clip-path="url(#gu-clip)">
+    <g opacity=".85">
+      <path d="M66 258 V150 Q66 132 84 130 Q100 132 100 150 V258 Z" fill="#222c38"/>
+      <path d="M200 258 V150 Q200 132 218 130 Q234 132 234 150 V258 Z" fill="#222c38"/>
+      <circle cx="83" cy="118" r="13" fill="#2e3a48"/><circle cx="217" cy="118" r="13" fill="#2e3a48"/>
+      <path d="M70 118 a13 13 0 0 1 26 0 Z" fill="#4a5a6c"/><path d="M204 118 a13 13 0 0 1 26 0 Z" fill="#4a5a6c"/>
+      <rect x="60" y="164" width="10" height="80" rx="4" fill="#3a4654"/>
+      <rect x="230" y="164" width="10" height="80" rx="4" fill="#3a4654"/>
+      <path d="M65 158 l-6 -14 h12 Z M235 158 l-6 -14 h12 Z" fill="#6a7a8c"/>
+    </g>
+    <path d="M150 88 L216 108 V172 C216 214 190 240 150 252 C110 240 84 214 84 172 V108 Z" fill="url(#gu-shield)" stroke="#c9a860" stroke-width="2.5"/>
+    <path d="M150 96 L208 114 V170 C208 208 186 232 150 243 C114 232 92 208 92 170 V114 Z" fill="none" stroke="#1c2430" stroke-width="2" opacity=".7"/>
+    <path d="M150 88 V252" stroke="#1c2430" stroke-width="2" opacity=".5"/>
+    <g transform="rotate(-8 150 168)">
+      <rect x="122" y="140" width="56" height="56" rx="10" fill="url(#gu-die)" stroke="#8a7a58" stroke-width="1.5"/>
+      <g fill="#3a2c18">
+        <circle cx="136" cy="154" r="4.5"/><circle cx="164" cy="154" r="4.5"/>
+        <circle cx="136" cy="182" r="4.5"/><circle cx="164" cy="182" r="4.5"/>
+        <circle cx="150" cy="168" r="4.5"/>
+      </g>
+    </g>
+    <g fill="#cfe0f0">
+      <circle cx="66" cy="96" r="1.4" opacity=".6"/><circle cx="238" cy="90" r="1.3" opacity=".55"/>
+      <circle cx="54" cy="210" r="1.2" opacity=".4"/><circle cx="248" cy="216" r="1.3" opacity=".45"/>
+    </g>
+    <ellipse cx="150" cy="256" rx="130" ry="15" fill="#020408" opacity=".9"/>
+  </g>
+  <rect x="24" y="70" width="252" height="188" rx="6" fill="none" stroke="url(#gu-frame)" stroke-width="1.5"/>
+
+  <rect x="26" y="286" width="248" height="92" rx="5" fill="url(#gu-parch)" stroke="#4a3a20" stroke-width="1.5"/>
+  <rect x="29" y="289" width="242" height="86" rx="3" fill="none" stroke="#8a744a" stroke-opacity=".5"/>
+  <text x="150" y="305" text-anchor="middle" font-size="10" letter-spacing="3" fill="#7a6640">─ フィールドカード ─</text>
+  <text x="150" y="325" text-anchor="middle" font-size="14" font-weight="bold" fill="#241c10">カードの上のダイスの数が護衛の人数</text>
+  <text x="150" y="344" text-anchor="middle" font-size="14" font-weight="bold" fill="#241c10">初期値10から始まる</text>
+  <text x="150" y="366" text-anchor="middle" font-size="10.5" fill="#6a5c40">「盾の壁は王の眠りを守る」</text>
+
+  <circle cx="150" cy="394" r="13" fill="#181f28" stroke="url(#gu-gold)" stroke-width="2"/>
+  <path d="M150 386 L157 388.5 V394 C157 398.5 154 401.5 150 403 C146 401.5 143 398.5 143 394 V388.5 Z" fill="#8a9cb0"/>
 </svg>

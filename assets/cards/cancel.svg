@@ -1,42 +1,86 @@
 <svg viewBox="0 0 300 420" xmlns="http://www.w3.org/2000/svg" font-family="'Hiragino Mincho ProN','Yu Mincho','Noto Serif JP',serif">
   <defs>
-    <linearGradient id="ca-bg" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#2b1f4e"/><stop offset="1" stop-color="#120c24"/>
+    <linearGradient id="ca-gold" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f4e4a8"/><stop offset=".45" stop-color="#d4af37"/><stop offset="1" stop-color="#7a5f1e"/>
     </linearGradient>
-    <radialGradient id="ca-art" cx="0.5" cy="0.5" r="0.75">
-      <stop offset="0" stop-color="#1d3d63"/><stop offset="0.7" stop-color="#0c1c33"/><stop offset="1" stop-color="#060d18"/>
+    <linearGradient id="ca-frame" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#6a5a30"/><stop offset=".5" stop-color="#c9a860"/><stop offset="1" stop-color="#4a3a1c"/>
+    </linearGradient>
+    <linearGradient id="ca-parch" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ece2c6"/><stop offset="1" stop-color="#cbbc94"/>
+    </linearGradient>
+    <radialGradient id="ca-art" cx=".5" cy=".45" r=".85">
+      <stop offset="0" stop-color="#12304a"/><stop offset=".55" stop-color="#0a1c30"/><stop offset="1" stop-color="#030812"/>
     </radialGradient>
-    <radialGradient id="ca-flash" cx="0.5" cy="0.5" r="0.5">
-      <stop offset="0" stop-color="#9fe4ff" stop-opacity="0.55"/><stop offset="1" stop-color="#9fe4ff" stop-opacity="0"/>
+    <radialGradient id="ca-glow" cx=".5" cy=".5" r=".5">
+      <stop offset="0" stop-color="#7fdcff" stop-opacity=".8"/><stop offset=".55" stop-color="#2a7ab0" stop-opacity=".3"/><stop offset="1" stop-color="#2a7ab0" stop-opacity="0"/>
     </radialGradient>
-    <clipPath id="ca-clip"><rect x="22" y="66" width="256" height="196" rx="8"/></clipPath>
+    <linearGradient id="ca-x" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#e8f8ff"/><stop offset=".5" stop-color="#7fdcff"/><stop offset="1" stop-color="#3a9ad0"/>
+    </linearGradient>
+    <filter id="ca-noise" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency=".55" numOctaves="2" result="n" seed="10"/>
+      <feColorMatrix in="n" type="matrix" values="0 0 0 0 .35 0 0 0 0 .48 0 0 0 0 .62 0 0 0 .15 0"/>
+      <feComposite operator="in" in2="SourceGraphic"/>
+    </filter>
+    <filter id="ca-glowf" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="4"/>
+    </filter>
+    <clipPath id="ca-clip"><rect x="24" y="70" width="252" height="188" rx="6"/></clipPath>
   </defs>
-  <rect x="4" y="4" width="292" height="412" rx="16" fill="url(#ca-bg)" stroke="#8f7fd0" stroke-width="3"/>
-  <rect x="11" y="11" width="278" height="398" rx="11" fill="none" stroke="#8f7fd0" stroke-opacity="0.35"/>
-  <text x="150" y="42" text-anchor="middle" font-size="24" font-weight="bold" fill="#ede8ff">取 消</text>
-  <text x="150" y="59" text-anchor="middle" font-size="10" letter-spacing="4" fill="#b3a4ea" font-family="Georgia,serif">CANCEL</text>
-  <rect x="22" y="66" width="256" height="196" rx="8" fill="url(#ca-art)" stroke="#8f7fd0" stroke-opacity="0.6"/>
-  <g clip-path="url(#ca-clip)">
-    <circle cx="150" cy="164" r="72" fill="none" stroke="#3f8fc0" stroke-width="2.5" stroke-dasharray="26 8" opacity="0.85"/>
-    <circle cx="150" cy="164" r="60" fill="none" stroke="#35729c" stroke-width="1.5" stroke-dasharray="3 9" opacity="0.8"/>
-    <polygon points="150,110 197,191 103,191" fill="none" stroke="#35729c" stroke-width="1.5" opacity="0.55"/>
-    <polygon points="150,218 103,137 197,137" fill="none" stroke="#35729c" stroke-width="1.5" opacity="0.45"/>
-    <circle cx="150" cy="164" r="86" fill="url(#ca-flash)"/>
-    <line x1="98" y1="112" x2="202" y2="216" stroke="#7fdcff" stroke-width="11" stroke-linecap="round"/>
-    <line x1="202" y1="112" x2="98" y2="216" stroke="#7fdcff" stroke-width="11" stroke-linecap="round"/>
-    <line x1="98" y1="112" x2="202" y2="216" stroke="#ffffff" stroke-width="4" stroke-linecap="round"/>
-    <line x1="202" y1="112" x2="98" y2="216" stroke="#ffffff" stroke-width="4" stroke-linecap="round"/>
-    <polygon points="70,140 82,132 78,148" fill="#7fdcff" opacity="0.7"/>
-    <polygon points="228,150 218,142 224,158" fill="#7fdcff" opacity="0.7"/>
-    <polygon points="120,86 130,92 118,98" fill="#7fdcff" opacity="0.6"/>
-    <polygon points="186,238 176,230 188,228" fill="#7fdcff" opacity="0.6"/>
-    <polygon points="86,204 96,210 84,214" fill="#5ac8ff" opacity="0.5"/>
-    <path d="M56 100 L62 100 M59 97 L59 106" stroke="#5ac8ff" stroke-width="1.5" opacity="0.6"/>
-    <path d="M242 214 L248 214 M245 211 L245 220" stroke="#5ac8ff" stroke-width="1.5" opacity="0.6"/>
+
+  <rect x="3" y="3" width="294" height="414" rx="14" fill="#0a0810"/>
+  <rect x="3" y="3" width="294" height="414" rx="14" filter="url(#ca-noise)"/>
+  <rect x="7.5" y="7.5" width="285" height="405" rx="11" fill="none" stroke="url(#ca-frame)" stroke-width="3"/>
+  <rect x="13" y="13" width="274" height="394" rx="8" fill="none" stroke="#c9a227" stroke-opacity=".4"/>
+  <g stroke="url(#ca-gold)" stroke-width="2" fill="none">
+    <path d="M13 34 Q13 13 34 13"/><path d="M266 13 Q287 13 287 34"/>
+    <path d="M287 386 Q287 407 266 407"/><path d="M34 407 Q13 407 13 386"/>
   </g>
-  <rect x="22" y="272" width="256" height="22" rx="4" fill="#8f7fd0" fill-opacity="0.14"/>
-  <text x="150" y="287" text-anchor="middle" font-size="11" letter-spacing="2" fill="#b3a4ea">スペルカード</text>
-  <text x="150" y="328" text-anchor="middle" font-size="16" font-weight="bold" fill="#f0ebff">相手の呪文を無効化する</text>
-  <line x1="60" y1="358" x2="240" y2="358" stroke="#8f7fd0" stroke-opacity="0.35"/>
-  <text x="150" y="384" text-anchor="middle" font-size="11" fill="#8f83b8">「唱えられた言葉は、風に消えた」</text>
+  <g fill="#d4af37"><circle cx="21" cy="21" r="2.2"/><circle cx="279" cy="21" r="2.2"/><circle cx="279" cy="399" r="2.2"/><circle cx="21" cy="399" r="2.2"/></g>
+
+  <circle cx="38" cy="40" r="17" fill="#0a1c30" stroke="url(#ca-gold)" stroke-width="2.5"/>
+  <path d="M31 33 L45 47 M45 33 L31 47" stroke="#7fdcff" stroke-width="4" stroke-linecap="round"/>
+
+  <text x="163" y="40" text-anchor="middle" font-size="25" fill="#efe6cf" font-family="Georgia,'Times New Roman',serif" letter-spacing="2">cancel</text>
+  <text x="163" y="59" text-anchor="middle" font-size="13" letter-spacing="6" fill="#c9b87a">取消</text>
+
+  <rect x="24" y="70" width="252" height="188" rx="6" fill="url(#ca-art)"/>
+  <g clip-path="url(#ca-clip)">
+    <ellipse cx="150" cy="162" rx="120" ry="98" fill="url(#ca-glow)"/>
+    <g fill="none" stroke="#5ab8e0" opacity=".8">
+      <circle cx="150" cy="162" r="72" stroke-width="2"/>
+      <circle cx="150" cy="162" r="62" stroke-width="1" stroke-dasharray="3 6"/>
+      <circle cx="150" cy="162" r="82" stroke-width="1" opacity=".5"/>
+    </g>
+    <g fill="#5ab8e0" font-family="Georgia,serif" font-size="9" opacity=".75" text-anchor="middle">
+      <text x="150" y="86">✦</text><text x="222" y="166">✦</text><text x="150" y="246">✦</text><text x="78" y="166">✦</text>
+      <text x="201" y="110">✧</text><text x="201" y="226">✧</text><text x="99" y="226">✧</text><text x="99" y="110">✧</text>
+    </g>
+    <g filter="url(#ca-glowf)" opacity=".9">
+      <path d="M108 120 L192 204 M192 120 L108 204" stroke="#2a7ab0" stroke-width="20" stroke-linecap="round"/>
+    </g>
+    <path d="M108 120 L192 204 M192 120 L108 204" stroke="url(#ca-x)" stroke-width="12" stroke-linecap="round"/>
+    <path d="M112 124 L188 200 M188 124 L112 200" stroke="#f0fbff" stroke-width="3" stroke-linecap="round" opacity=".9"/>
+    <g stroke="#7fdcff" stroke-width="1.5" fill="none" opacity=".7" stroke-linecap="round">
+      <path d="M64 100 l10 10 M74 100 l-10 10"/>
+      <path d="M232 214 l8 8 M240 214 l-8 8"/>
+      <path d="M226 96 l7 7 M233 96 l-7 7"/>
+    </g>
+    <g fill="#cfeeff">
+      <circle cx="88" cy="212" r="1.8" opacity=".8"/><circle cx="212" cy="130" r="1.5" opacity=".7"/>
+      <circle cx="150" cy="120" r="1.6" opacity=".8"/><circle cx="118" cy="238" r="1.4" opacity=".6"/>
+    </g>
+    <ellipse cx="150" cy="252" rx="120" ry="16" fill="#010610" opacity=".9"/>
+  </g>
+  <rect x="24" y="70" width="252" height="188" rx="6" fill="none" stroke="url(#ca-frame)" stroke-width="1.5"/>
+
+  <rect x="26" y="286" width="248" height="92" rx="5" fill="url(#ca-parch)" stroke="#4a3a20" stroke-width="1.5"/>
+  <rect x="29" y="289" width="242" height="86" rx="3" fill="none" stroke="#8a744a" stroke-opacity=".5"/>
+  <text x="150" y="305" text-anchor="middle" font-size="10" letter-spacing="3" fill="#7a6640">─ スペルカード ─</text>
+  <text x="150" y="331" text-anchor="middle" font-size="16" font-weight="bold" fill="#241c10">相手の呪文を無効化する</text>
+  <text x="150" y="364" text-anchor="middle" font-size="10.5" fill="#6a5c40">「唱えられた言葉は、風に消えた」</text>
+
+  <circle cx="150" cy="394" r="13" fill="#0a1c30" stroke="url(#ca-gold)" stroke-width="2"/>
+  <path d="M145 389 L155 399 M155 389 L145 399" stroke="#7fdcff" stroke-width="3.2" stroke-linecap="round"/>
 </svg>

@@ -1,41 +1,86 @@
 <svg viewBox="0 0 300 420" xmlns="http://www.w3.org/2000/svg" font-family="'Hiragino Mincho ProN','Yu Mincho','Noto Serif JP',serif">
   <defs>
-    <linearGradient id="cy-bg" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#2b1f4e"/><stop offset="1" stop-color="#120c24"/>
+    <linearGradient id="cy-gold" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f4e4a8"/><stop offset=".45" stop-color="#d4af37"/><stop offset="1" stop-color="#7a5f1e"/>
+    </linearGradient>
+    <linearGradient id="cy-frame" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#6a5a30"/><stop offset=".5" stop-color="#c9a860"/><stop offset="1" stop-color="#4a3a1c"/>
+    </linearGradient>
+    <linearGradient id="cy-parch" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ece2c6"/><stop offset="1" stop-color="#cbbc94"/>
     </linearGradient>
     <linearGradient id="cy-sky" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#22333d"/><stop offset="0.5" stop-color="#3a5561"/><stop offset="1" stop-color="#101c22"/>
+      <stop offset="0" stop-color="#1a2a42"/><stop offset=".6" stop-color="#0c1626"/><stop offset="1" stop-color="#050a14"/>
     </linearGradient>
-    <clipPath id="cy-clip"><rect x="22" y="66" width="256" height="196" rx="8"/></clipPath>
+    <linearGradient id="cy-funnel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#b8d4e8"/><stop offset=".5" stop-color="#6a92b0"/><stop offset="1" stop-color="#31506b"/>
+    </linearGradient>
+    <filter id="cy-noise" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency=".55" numOctaves="2" result="n" seed="8"/>
+      <feColorMatrix in="n" type="matrix" values="0 0 0 0 .4 0 0 0 0 .5 0 0 0 0 .62 0 0 0 .15 0"/>
+      <feComposite operator="in" in2="SourceGraphic"/>
+    </filter>
+    <filter id="cy-wind" x="-25%" y="-25%" width="150%" height="150%">
+      <feTurbulence type="fractalNoise" baseFrequency=".02 .05" numOctaves="3" seed="4" result="w"/>
+      <feDisplacementMap in="SourceGraphic" in2="w" scale="22"/>
+    </filter>
+    <clipPath id="cy-clip"><rect x="24" y="70" width="252" height="188" rx="6"/></clipPath>
   </defs>
-  <rect x="4" y="4" width="292" height="412" rx="16" fill="url(#cy-bg)" stroke="#8f7fd0" stroke-width="3"/>
-  <rect x="11" y="11" width="278" height="398" rx="11" fill="none" stroke="#8f7fd0" stroke-opacity="0.35"/>
-  <text x="150" y="42" text-anchor="middle" font-size="24" font-weight="bold" fill="#ede8ff">竜 巻</text>
-  <text x="150" y="59" text-anchor="middle" font-size="10" letter-spacing="4" fill="#b3a4ea" font-family="Georgia,serif">CYCLONE</text>
-  <rect x="22" y="66" width="256" height="196" rx="8" fill="url(#cy-sky)" stroke="#8f7fd0" stroke-opacity="0.6"/>
-  <g clip-path="url(#cy-clip)">
-    <ellipse cx="90" cy="80" rx="70" ry="18" fill="#1c2b33"/>
-    <ellipse cx="200" cy="74" rx="80" ry="20" fill="#22333d"/>
-    <ellipse cx="150" cy="88" rx="110" ry="16" fill="#182730" opacity="0.9"/>
-    <polyline points="222,92 204,126 218,128 196,164" fill="none" stroke="#ffe98a" stroke-width="3" stroke-linejoin="round" opacity="0.9"/>
-    <ellipse cx="150" cy="102" rx="86" ry="16" fill="#8fa9b5" stroke="#c2d4dc" stroke-opacity="0.5"/>
-    <ellipse cx="144" cy="128" rx="66" ry="13" fill="#7d97a4" stroke="#c2d4dc" stroke-opacity="0.45"/>
-    <ellipse cx="153" cy="153" rx="49" ry="11" fill="#6b8492" stroke="#c2d4dc" stroke-opacity="0.4"/>
-    <ellipse cx="146" cy="177" rx="34" ry="9" fill="#5a7280" stroke="#c2d4dc" stroke-opacity="0.35"/>
-    <ellipse cx="152" cy="199" rx="21" ry="7" fill="#4a5f6c" stroke="#c2d4dc" stroke-opacity="0.3"/>
-    <ellipse cx="149" cy="218" rx="11" ry="5" fill="#3a4c57"/>
-    <rect x="68" y="118" width="12" height="6" fill="#4a3a26" transform="rotate(24 74 121)"/>
-    <rect x="226" y="140" width="14" height="5" fill="#4a3a26" transform="rotate(-30 233 142)"/>
-    <rect x="84" y="176" width="10" height="5" fill="#54422c" transform="rotate(-18 89 178)"/>
-    <rect x="212" y="108" width="9" height="9" fill="#3f3220" transform="rotate(40 216 112)"/>
-    <path d="M52 96 L44 120 M64 150 L57 170 M244 96 L237 118 M252 160 L245 182" stroke="#a8c0cc" stroke-width="1.5" opacity="0.5"/>
-    <rect x="22" y="236" width="256" height="26" fill="#141f26"/>
-    <ellipse cx="149" cy="238" rx="52" ry="10" fill="#2a3a44"/>
-    <ellipse cx="149" cy="236" rx="30" ry="6" fill="#3a4c57"/>
+
+  <rect x="3" y="3" width="294" height="414" rx="14" fill="#0a0810"/>
+  <rect x="3" y="3" width="294" height="414" rx="14" filter="url(#cy-noise)"/>
+  <rect x="7.5" y="7.5" width="285" height="405" rx="11" fill="none" stroke="url(#cy-frame)" stroke-width="3"/>
+  <rect x="13" y="13" width="274" height="394" rx="8" fill="none" stroke="#c9a227" stroke-opacity=".4"/>
+  <g stroke="url(#cy-gold)" stroke-width="2" fill="none">
+    <path d="M13 34 Q13 13 34 13"/><path d="M266 13 Q287 13 287 34"/>
+    <path d="M287 386 Q287 407 266 407"/><path d="M34 407 Q13 407 13 386"/>
   </g>
-  <rect x="22" y="272" width="256" height="22" rx="4" fill="#8f7fd0" fill-opacity="0.14"/>
-  <text x="150" y="287" text-anchor="middle" font-size="11" letter-spacing="2" fill="#b3a4ea">スペルカード</text>
-  <text x="150" y="328" text-anchor="middle" font-size="16" font-weight="bold" fill="#f0ebff">護衛を3体倒す</text>
-  <line x1="60" y1="358" x2="240" y2="358" stroke="#8f7fd0" stroke-opacity="0.35"/>
-  <text x="150" y="384" text-anchor="middle" font-size="11" fill="#8f83b8">「嵐は誰も選ばない」</text>
+  <g fill="#d4af37"><circle cx="21" cy="21" r="2.2"/><circle cx="279" cy="21" r="2.2"/><circle cx="279" cy="399" r="2.2"/><circle cx="21" cy="399" r="2.2"/></g>
+
+  <circle cx="38" cy="40" r="17" fill="#0c1626" stroke="url(#cy-gold)" stroke-width="2.5"/>
+  <path d="M29 33 h18 M31.5 39 h13 M34 45 h9 M36 50.5 h5" stroke="#9fd8e8" stroke-width="2.4" stroke-linecap="round" fill="none"/>
+
+  <text x="163" y="40" text-anchor="middle" font-size="25" fill="#efe6cf" font-family="Georgia,'Times New Roman',serif" letter-spacing="2">cyclone</text>
+  <text x="163" y="59" text-anchor="middle" font-size="13" letter-spacing="6" fill="#c9b87a">竜巻</text>
+
+  <rect x="24" y="70" width="252" height="188" rx="6" fill="url(#cy-sky)"/>
+  <g clip-path="url(#cy-clip)">
+    <g filter="url(#cy-wind)" opacity=".85">
+      <ellipse cx="80" cy="95" rx="90" ry="34" fill="#0a1420"/>
+      <ellipse cx="225" cy="88" rx="85" ry="30" fill="#0e1a2c"/>
+      <ellipse cx="150" cy="76" rx="130" ry="26" fill="#060d18"/>
+    </g>
+    <path d="M120 246 L104 96 M180 246 L196 96" stroke="#0a1420" stroke-width="3" opacity=".4"/>
+    <g filter="url(#cy-wind)">
+      <ellipse cx="150" cy="104" rx="86" ry="16" fill="url(#cy-funnel)" opacity=".95"/>
+      <ellipse cx="150" cy="128" rx="66" ry="13" fill="url(#cy-funnel)" opacity=".88"/>
+      <ellipse cx="152" cy="152" rx="48" ry="11" fill="url(#cy-funnel)" opacity=".82"/>
+      <ellipse cx="148" cy="176" rx="34" ry="9" fill="url(#cy-funnel)" opacity=".78"/>
+      <ellipse cx="151" cy="198" rx="22" ry="7.5" fill="url(#cy-funnel)" opacity=".74"/>
+      <ellipse cx="149" cy="218" rx="13" ry="6" fill="url(#cy-funnel)" opacity=".7"/>
+      <ellipse cx="150" cy="234" rx="7" ry="5" fill="url(#cy-funnel)" opacity=".68"/>
+    </g>
+    <path d="M196 92 L178 118 L190 118 L166 152" stroke="#ffe9a8" stroke-width="3" fill="none" stroke-linejoin="round" stroke-linecap="round" opacity=".95"/>
+    <path d="M96 108 L110 128 L100 128 L116 150" stroke="#cfe6ff" stroke-width="2" fill="none" stroke-linejoin="round" stroke-linecap="round" opacity=".6"/>
+    <g stroke="#8ab4cc" stroke-width="1.6" fill="none" opacity=".7" stroke-linecap="round">
+      <path d="M52 140 q26 -10 44 4"/><path d="M212 168 q22 -12 40 -2"/>
+      <path d="M60 200 q30 -12 52 2"/><path d="M198 214 q26 -10 44 4"/>
+    </g>
+    <g fill="#cfe6ff">
+      <circle cx="86" cy="164" r="1.6" opacity=".8"/><circle cx="220" cy="140" r="1.4" opacity=".7"/>
+      <circle cx="102" cy="220" r="1.8" opacity=".6"/><circle cx="232" cy="196" r="1.5" opacity=".7"/>
+    </g>
+    <ellipse cx="150" cy="252" rx="130" ry="16" fill="#030710" opacity=".95"/>
+    <ellipse cx="150" cy="244" rx="60" ry="7" fill="#1c3450" opacity=".8" filter="url(#cy-wind)"/>
+  </g>
+  <rect x="24" y="70" width="252" height="188" rx="6" fill="none" stroke="url(#cy-frame)" stroke-width="1.5"/>
+
+  <rect x="26" y="286" width="248" height="92" rx="5" fill="url(#cy-parch)" stroke="#4a3a20" stroke-width="1.5"/>
+  <rect x="29" y="289" width="242" height="86" rx="3" fill="none" stroke="#8a744a" stroke-opacity=".5"/>
+  <text x="150" y="305" text-anchor="middle" font-size="10" letter-spacing="3" fill="#7a6640">─ スペルカード ─</text>
+  <text x="150" y="331" text-anchor="middle" font-size="16" font-weight="bold" fill="#241c10">護衛を3体倒す</text>
+  <text x="150" y="364" text-anchor="middle" font-size="10.5" fill="#6a5c40">「嵐は誰も選ばない」</text>
+
+  <circle cx="150" cy="394" r="13" fill="#0c1626" stroke="url(#cy-gold)" stroke-width="2"/>
+  <path d="M143 389.5 h14 M145 394 h10 M147 398.5 h6" stroke="#9fd8e8" stroke-width="2" stroke-linecap="round" fill="none"/>
 </svg>

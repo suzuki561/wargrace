@@ -1,45 +1,88 @@
 <svg viewBox="0 0 300 420" xmlns="http://www.w3.org/2000/svg" font-family="'Hiragino Mincho ProN','Yu Mincho','Noto Serif JP',serif">
   <defs>
-    <linearGradient id="cu-bg" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#2b1f4e"/><stop offset="1" stop-color="#120c24"/>
+    <linearGradient id="cu-gold" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f4e4a8"/><stop offset=".45" stop-color="#d4af37"/><stop offset="1" stop-color="#7a5f1e"/>
     </linearGradient>
-    <radialGradient id="cu-art" cx="0.5" cy="0.45" r="0.8">
-      <stop offset="0" stop-color="#43265f"/><stop offset="0.6" stop-color="#241238"/><stop offset="1" stop-color="#0d0618"/>
+    <linearGradient id="cu-frame" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#6a5a30"/><stop offset=".5" stop-color="#c9a860"/><stop offset="1" stop-color="#4a3a1c"/>
+    </linearGradient>
+    <linearGradient id="cu-parch" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ece2c6"/><stop offset="1" stop-color="#cbbc94"/>
+    </linearGradient>
+    <radialGradient id="cu-art" cx=".5" cy=".42" r=".85">
+      <stop offset="0" stop-color="#3d2158"/><stop offset=".55" stop-color="#1c0e30"/><stop offset="1" stop-color="#070310"/>
     </radialGradient>
-    <radialGradient id="cu-aura" cx="0.5" cy="0.5" r="0.5">
-      <stop offset="0" stop-color="#a05ce0" stop-opacity="0.7"/><stop offset="1" stop-color="#a05ce0" stop-opacity="0"/>
+    <radialGradient id="cu-aura" cx=".5" cy=".45" r=".5">
+      <stop offset="0" stop-color="#b36bff" stop-opacity=".85"/><stop offset=".55" stop-color="#7a3fc0" stop-opacity=".35"/><stop offset="1" stop-color="#7a3fc0" stop-opacity="0"/>
     </radialGradient>
-    <clipPath id="cu-clip"><rect x="22" y="66" width="256" height="196" rx="8"/></clipPath>
+    <radialGradient id="cu-skull" cx=".42" cy=".38" r=".9">
+      <stop offset="0" stop-color="#cfc0e8"/><stop offset=".6" stop-color="#8a76b8"/><stop offset="1" stop-color="#4a3a70"/>
+    </radialGradient>
+    <filter id="cu-noise" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency=".55" numOctaves="2" result="n" seed="7"/>
+      <feColorMatrix in="n" type="matrix" values="0 0 0 0 .5 0 0 0 0 .42 0 0 0 0 .62 0 0 0 .16 0"/>
+      <feComposite operator="in" in2="SourceGraphic"/>
+    </filter>
+    <filter id="cu-smoke" x="-20%" y="-20%" width="140%" height="140%">
+      <feTurbulence type="fractalNoise" baseFrequency=".012 .03" numOctaves="3" seed="11" result="w"/>
+      <feDisplacementMap in="SourceGraphic" in2="w" scale="34"/>
+    </filter>
+    <clipPath id="cu-clip"><rect x="24" y="70" width="252" height="188" rx="6"/></clipPath>
   </defs>
-  <rect x="4" y="4" width="292" height="412" rx="16" fill="url(#cu-bg)" stroke="#8f7fd0" stroke-width="3"/>
-  <rect x="11" y="11" width="278" height="398" rx="11" fill="none" stroke="#8f7fd0" stroke-opacity="0.35"/>
-  <text x="150" y="42" text-anchor="middle" font-size="24" font-weight="bold" fill="#ede8ff">呪 詛</text>
-  <text x="150" y="59" text-anchor="middle" font-size="10" letter-spacing="4" fill="#b3a4ea" font-family="Georgia,serif">CURSE</text>
-  <rect x="22" y="66" width="256" height="196" rx="8" fill="url(#cu-art)" stroke="#8f7fd0" stroke-opacity="0.6"/>
-  <g clip-path="url(#cu-clip)">
-    <ellipse cx="150" cy="160" rx="100" ry="82" fill="url(#cu-aura)"/>
-    <path d="M42 66 C58 108 36 142 62 192" stroke="#6a3fa0" stroke-width="5" fill="none" opacity="0.55" stroke-linecap="round"/>
-    <path d="M258 66 C244 104 266 150 240 196" stroke="#6a3fa0" stroke-width="5" fill="none" opacity="0.55" stroke-linecap="round"/>
-    <path d="M90 66 C98 92 84 112 96 134" stroke="#54307e" stroke-width="3.5" fill="none" opacity="0.5" stroke-linecap="round"/>
-    <path d="M212 66 C204 90 218 114 206 138" stroke="#54307e" stroke-width="3.5" fill="none" opacity="0.5" stroke-linecap="round"/>
-    <ellipse cx="150" cy="150" rx="48" ry="44" fill="#ece4d4"/>
-    <rect x="128" y="182" width="44" height="30" rx="9" fill="#ece4d4"/>
-    <ellipse cx="132" cy="152" rx="12" ry="15" fill="#1a0d2e"/>
-    <ellipse cx="168" cy="152" rx="12" ry="15" fill="#1a0d2e"/>
-    <circle cx="132" cy="154" r="3.5" fill="#cf7bff"/>
-    <circle cx="168" cy="154" r="3.5" fill="#cf7bff"/>
-    <path d="M150 166 L143 182 L157 182 Z" fill="#1a0d2e"/>
-    <path d="M136 186 L136 208 M144 188 L144 210 M152 188 L152 210 M160 188 L160 210 M166 186 L166 206" stroke="#1a0d2e" stroke-width="2"/>
-    <path d="M150 108 L145 124 L152 137" stroke="#8a7f6a" stroke-width="1.5" fill="none"/>
-    <path d="M60 220 L66 208 L72 220 L66 216 Z" fill="#cf7bff" opacity="0.8"/>
-    <path d="M236 210 L242 198 L248 210 L242 206 Z" fill="#cf7bff" opacity="0.7"/>
-    <path d="M78 100 L84 100 M81 96 L81 108" stroke="#cf7bff" stroke-width="2" opacity="0.7"/>
-    <path d="M222 92 L230 92 M226 88 L226 100" stroke="#cf7bff" stroke-width="2" opacity="0.6"/>
-    <ellipse cx="150" cy="248" rx="90" ry="14" fill="#0d0618" opacity="0.8"/>
+
+  <rect x="3" y="3" width="294" height="414" rx="14" fill="#0a0810"/>
+  <rect x="3" y="3" width="294" height="414" rx="14" filter="url(#cu-noise)"/>
+  <rect x="7.5" y="7.5" width="285" height="405" rx="11" fill="none" stroke="url(#cu-frame)" stroke-width="3"/>
+  <rect x="13" y="13" width="274" height="394" rx="8" fill="none" stroke="#c9a227" stroke-opacity=".4"/>
+  <g stroke="url(#cu-gold)" stroke-width="2" fill="none">
+    <path d="M13 34 Q13 13 34 13"/><path d="M266 13 Q287 13 287 34"/>
+    <path d="M287 386 Q287 407 266 407"/><path d="M34 407 Q13 407 13 386"/>
   </g>
-  <rect x="22" y="272" width="256" height="22" rx="4" fill="#8f7fd0" fill-opacity="0.14"/>
-  <text x="150" y="287" text-anchor="middle" font-size="11" letter-spacing="2" fill="#b3a4ea">スペルカード</text>
-  <text x="150" y="328" text-anchor="middle" font-size="16" font-weight="bold" fill="#f0ebff">ストライカーを1体倒す</text>
-  <line x1="60" y1="358" x2="240" y2="358" stroke="#8f7fd0" stroke-opacity="0.35"/>
-  <text x="150" y="384" text-anchor="middle" font-size="11" fill="#8f83b8">「闇は名を呼び、命を蝕む」</text>
+  <g fill="#d4af37"><circle cx="21" cy="21" r="2.2"/><circle cx="279" cy="21" r="2.2"/><circle cx="279" cy="399" r="2.2"/><circle cx="21" cy="399" r="2.2"/></g>
+
+  <circle cx="38" cy="40" r="17" fill="#160b26" stroke="url(#cu-gold)" stroke-width="2.5"/>
+  <path d="M38 30 a8.5 8.5 0 0 1 8.5 8.5 c0 3.4-2 5.4-3.5 6.8 l0 3.2 h-10 l0-3.2 c-1.5-1.4-3.5-3.4-3.5-6.8 A8.5 8.5 0 0 1 38 30 Z" fill="#b36bff"/>
+  <circle cx="34.5" cy="39" r="2.1" fill="#160b26"/><circle cx="41.5" cy="39" r="2.1" fill="#160b26"/>
+  <path d="M34 51 h8" stroke="#b36bff" stroke-width="1.6"/>
+
+  <text x="163" y="40" text-anchor="middle" font-size="25" fill="#efe6cf" font-family="Georgia,'Times New Roman',serif" letter-spacing="2">curse</text>
+  <text x="163" y="59" text-anchor="middle" font-size="13" letter-spacing="6" fill="#c9b87a">呪詛</text>
+
+  <rect x="24" y="70" width="252" height="188" rx="6" fill="url(#cu-art)"/>
+  <g clip-path="url(#cu-clip)">
+    <ellipse cx="150" cy="160" rx="120" ry="95" fill="url(#cu-aura)"/>
+    <g filter="url(#cu-smoke)" opacity=".8">
+      <path d="M24 258 C60 200 40 150 80 96 C100 70 140 80 150 120 C160 80 200 70 224 100 C258 150 240 205 276 258 Z" fill="#12071f"/>
+      <ellipse cx="70" cy="120" rx="60" ry="40" fill="#241238" opacity=".7"/>
+      <ellipse cx="235" cy="135" rx="55" ry="45" fill="#241238" opacity=".6"/>
+    </g>
+    <g filter="url(#cu-smoke)">
+      <path d="M150 88 C120 88 102 112 102 142 C102 164 112 178 124 186 L124 204 C124 212 132 218 150 218 C168 218 176 212 176 204 L176 186 C188 178 198 164 198 142 C198 112 180 88 150 88 Z" fill="url(#cu-skull)"/>
+    </g>
+    <ellipse cx="131" cy="146" rx="13" ry="16" fill="#0d0518"/>
+    <ellipse cx="169" cy="146" rx="13" ry="16" fill="#0d0518"/>
+    <circle cx="131" cy="149" r="4.5" fill="#cf7bff"><animate attributeName="opacity" values="1;.5;1" dur="2.6s" repeatCount="indefinite"/></circle>
+    <circle cx="169" cy="149" r="4.5" fill="#cf7bff"><animate attributeName="opacity" values="1;.5;1" dur="2.6s" repeatCount="indefinite"/></circle>
+    <path d="M150 160 L143 176 L157 176 Z" fill="#0d0518"/>
+    <path d="M134 192 v16 M143 195 v18 M151 195 v18 M159 195 v18 M167 192 v15" stroke="#0d0518" stroke-width="2.4"/>
+    <path d="M96 210 C80 190 84 168 96 150" stroke="#8a4fd0" stroke-width="2.5" fill="none" opacity=".6" stroke-linecap="round"/>
+    <path d="M204 210 C220 190 216 168 204 150" stroke="#8a4fd0" stroke-width="2.5" fill="none" opacity=".6" stroke-linecap="round"/>
+    <g fill="#cf7bff">
+      <circle cx="84" cy="102" r="1.8" opacity=".9"/><circle cx="222" cy="92" r="1.4" opacity=".7"/>
+      <circle cx="62" cy="176" r="1.6" opacity=".8"/><circle cx="244" cy="180" r="1.8" opacity=".6"/>
+      <circle cx="196" cy="76" r="1.3" opacity=".6"/><circle cx="106" cy="82" r="1.2" opacity=".7"/>
+    </g>
+    <ellipse cx="150" cy="252" rx="120" ry="18" fill="#05020c" opacity=".9"/>
+  </g>
+  <rect x="24" y="70" width="252" height="188" rx="6" fill="none" stroke="url(#cu-frame)" stroke-width="1.5"/>
+
+  <rect x="26" y="286" width="248" height="92" rx="5" fill="url(#cu-parch)" stroke="#4a3a20" stroke-width="1.5"/>
+  <rect x="29" y="289" width="242" height="86" rx="3" fill="none" stroke="#8a744a" stroke-opacity=".5"/>
+  <text x="150" y="305" text-anchor="middle" font-size="10" letter-spacing="3" fill="#7a6640">─ スペルカード ─</text>
+  <text x="150" y="331" text-anchor="middle" font-size="16" font-weight="bold" fill="#241c10">ストライカーを1体倒す</text>
+  <text x="150" y="364" text-anchor="middle" font-size="10.5" fill="#6a5c40">「闇は名を呼び、命を蝕む」</text>
+
+  <circle cx="150" cy="394" r="13" fill="#160b26" stroke="url(#cu-gold)" stroke-width="2"/>
+  <path d="M150 386.5 a6.3 6.3 0 0 1 6.3 6.3 c0 2.5-1.5 4-2.6 5 l0 2.4 h-7.4 l0-2.4 c-1.1-1-2.6-2.5-2.6-5 A6.3 6.3 0 0 1 150 386.5 Z" fill="#b36bff"/>
+  <circle cx="147.4" cy="393" r="1.5" fill="#160b26"/><circle cx="152.6" cy="393" r="1.5" fill="#160b26"/>
 </svg>
